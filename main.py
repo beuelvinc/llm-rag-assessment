@@ -1,38 +1,62 @@
 import os
 import json
-import asyncio
-import nest_asyncio
-import logging
-import inspect
-
+import time
+import numpy as np
+from fuzzywuzzy import fuzz
+from sentence_transformers import SentenceTransformer
+from sklearn.metrics.pairwise import cosine_similarity
 from lightrag import LightRAG, QueryParam
 from lightrag.llm.ollama import ollama_model_complete, ollama_embed
 from lightrag.utils import EmbeddingFunc
 from lightrag.kg.shared_storage import initialize_pipeline_status
+import logging
+# Initialize Sentence-BERT model
+sentence_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
+import nest_asyncio
+import asyncio
 
+# Apply nest_asyncio to allow running within an existing loop
 nest_asyncio.apply()
+# Constants
+DATA_DIR = "./data"  # Path to data
+QA_FILE = "./qa.json"  # Path to QA file
+OUTPUT_FILE = "./benchmark_results.json"  # Output file for saving results
 
-# Adjust paths and working directory as needed
-DATA_DIR = "./data"      # This is where your 50-55 folders/files reside
-QA_FILE = "./qa.json"    # JSON with questions/answers
-OUTPUT_FILE = "./gemma2.json"
-WORKING_DIR = "./working_dir"  # RAG working directory
+# Custom encoder for numpy types
+class NumpyEncoder(json.JSONEncoder):
+    def default(self, obj):
+        if isinstance(obj, np.generic):  # Check if it's a numpy object
+            return obj.item()  # Convert to Python native type
+        return super(NumpyEncoder, self).default(obj)
 
-logging.basicConfig(format="%(levelname)s:%(message)s", level=logging.DEBUG)
 
-# -----------------------------------------------------------------------------------
-# 1) Initialize RAG
-# -----------------------------------------------------------------------------------
-async def initialize_rag():
-    """Initialize the LightRAG instance with Ollama backend (modify as needed)."""
+
+# Helper Functions for Accuracy Measurement
+def exact_match_accuracy(predicted_answer, reference_answer):
+    return predicted_answer.strip().lower() == reference_answer.strip().lower()
+
+
+def fuzzy_match_accuracy(predicted_answer, reference_answer):
+    return fuzz.ratio(predicted_answer, reference_answer)
+
+
+def cosine_similarity_score(predicted_answer, reference_answer):
+    embeddings = sentence_model.encode([predicted_answer, reference_answer])
+    similarity = cosine_similarity([embeddings[0]], [embeddings[1]])
+    return similarity[0][0]
+
+
+# Initialize LightRAG for different models
+async def initialize_rag(model_name="gemma2:2b"):
+    """Initialize the LightRAG instance with a specified LLM backend."""
     rag = LightRAG(
-        working_dir=WORKING_DIR,
+        working_dir="./working_dir",
         llm_model_func=ollama_model_complete,
-        llm_model_name="gemma2:2b",
+        llm_model_name=model_name,
         llm_model_max_async=4,
         llm_model_max_token_size=32768,
         llm_model_kwargs={
-            "host": "http://localhost:11434",  # Adjust if different
+            "host": "http://localhost:11434",
             "options": {"num_ctx": 32768},
         },
         embedding_func=EmbeddingFunc(
@@ -41,7 +65,7 @@ async def initialize_rag():
             func=lambda texts: ollama_embed(
                 texts,
                 embed_model="nomic-embed-text",
-                host="http://localhost:11434"  # Adjust if different
+                host="http://localhost:11434"
             ),
         ),
     )
@@ -51,54 +75,8 @@ async def initialize_rag():
     return rag
 
 
-# -----------------------------------------------------------------------------------
-# Helper: Print streamed output
-# -----------------------------------------------------------------------------------
-async def print_stream(stream):
-    async for chunk in stream:
-        print(chunk, end="", flush=True)
-
-
-# -----------------------------------------------------------------------------------
-# 2) Insert data from files into RAG
-# -----------------------------------------------------------------------------------
-async def insert_data_from_folder(rag, folder_path):
-    """
-    Recursively traverse `folder_path`, read each file,
-    and insert its text content into RAG.
-    """
-    for root, dirs, files in os.walk(folder_path):
-        for filename in files:
-            filepath = os.path.join(root, filename)
-            # Depending on your files, you may need more robust reading/parsing here
-            try:
-                with open(filepath, 'r', encoding='utf-8') as f:
-                    text_content = f.read().strip()
-                    if text_content:
-                        rag.insert(text_content)
-                        logging.info(f"Inserted content from file: {filepath}")
-            except Exception as e:
-                logging.error(f"Could not read file {filepath}: {e}")
-
-
-# -----------------------------------------------------------------------------------
-# 3) Read QA from qa.json, query RAG, and save results
-# -----------------------------------------------------------------------------------
-async def process_qa_and_save(rag):
-    """
-    1. Read questions from `QA_FILE`.
-    2. For each question:
-        - Use Naive search
-        - Use Hybrid search
-    3. Store results alongside original "answer" in gemma2.json
-    """
-    if not os.path.exists(QA_FILE):
-        logging.error(f"QA file not found: {QA_FILE}")
-        return
-
-    with open(QA_FILE, 'r', encoding='utf-8') as f:
-        qa_data = json.load(f)
-
+# Function to process and benchmark the queries
+async def benchmark_rag(rag, qa_data, model_name):
     results = []
     for _, item in qa_data.items():
         question = item.get("question", "")
@@ -107,53 +85,68 @@ async def process_qa_and_save(rag):
         if not question:
             continue
 
-        logging.info(f"Querying RAG with question: {question}")
+        logging.info(f"Querying RAG ({model_name}) with question: {question}")
 
-        # ----------------------------------
-        # Naive Search
-        # ----------------------------------
-        naive_result = rag.query(question, param=QueryParam(mode="naive"))
-        logging.debug(f"Naive result: {naive_result}")
-
-        # ----------------------------------
-        # Hybrid Search
-        # ----------------------------------
+        # Measure the time taken by Hybrid search
+        start_time = time.time()
         hybrid_result = rag.query(question, param=QueryParam(mode="hybrid"))
-        logging.debug(f"Hybrid result: {hybrid_result}")
+        hybrid_time = time.time() - start_time
 
-        # Gather final record
+        # Compute fuzzy match and cosine similarity
+        fuzzy_score = fuzzy_match_accuracy(hybrid_result, reference_answer)
+        semantic_score = cosine_similarity_score(hybrid_result, reference_answer)
+
+        # Record the results
         record = {
+            "model_name": model_name,
             "question": question,
-            "answer": reference_answer,  # from qa.json
-            "gemma_naive_answer": naive_result,
-            "gemma_hybrid_answer": hybrid_result,
+            "reference_answer": reference_answer,
+            "hybrid_answer": hybrid_result,
+            "hybrid_time": hybrid_time,
+            "fuzzy_score": fuzzy_score,
+            "semantic_score": semantic_score,
         }
         results.append(record)
 
-    # -----------------------------------------------------------------------------------
-    # 4) Write results to gemma2.json
-    # -----------------------------------------------------------------------------------
+    return results
+
+
+# Function to load QA data
+def load_qa_data():
+    if not os.path.exists(QA_FILE):
+        logging.error(f"QA file not found: {QA_FILE}")
+        return {}
+
+    with open(QA_FILE, 'r', encoding='utf-8') as f:
+        return json.load(f)
+
+
+# Benchmarking for multiple models
+async def benchmark_models(models):
+    qa_data = load_qa_data()
+    all_results = []
+
+    for model_name in models:
+        rag = await initialize_rag(model_name)
+        model_results = await benchmark_rag(rag, qa_data, model_name)
+        all_results.extend(model_results)
+
+    # Save the results to a JSON file
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as out_f:
-        json.dump(results, out_f, ensure_ascii=False, indent=4)
+        # Ensure out_f is a text stream by using the correct file mode and encoding
+        json.dump(all_results, out_f, ensure_ascii=False, indent=4, cls=NumpyEncoder)
 
-    logging.info(f"Results written to {OUTPUT_FILE}")
+    logging.info(f"Benchmark results written to {OUTPUT_FILE}")
 
-
-# -----------------------------------------------------------------------------------
-# Main routine
-# -----------------------------------------------------------------------------------
-async def run_all():
-    # 1) Initialize the RAG instance
-    rag = await initialize_rag()
-
-    # 2) Insert data from the data folder
-    await insert_data_from_folder(rag, DATA_DIR)
-
-    # 3) Process QA (naive & hybrid) and save to gemma2.json
-    await process_qa_and_save(rag)
 
 def main():
-    asyncio.run(run_all())
+    model_1 = "gemma2:2b"  # 2b
+    model_2 = "moondream"  # 1.4b
+    model_3 = "llama3.2"  # 3b
+
+    models = [model_1,model_2,model_3]  # List of model names
+    asyncio.run(benchmark_models(models))
+
 
 if __name__ == "__main__":
     main()
