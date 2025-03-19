@@ -20,7 +20,7 @@ load_dotenv()
 
 nest_asyncio.apply()
 # Constants
-DATA_DIR = "./data"  # Path to data
+DATA_DIR = "./data/bakery_deliver"  # Path to data
 QA_FILE = "./qa.json"  # Path to QA file
 OUTPUT_FILE = "./benchmark_results.json"  # Output file for saving results
 
@@ -43,7 +43,9 @@ def cosine_similarity_score(predicted_answer, reference_answer):
     return similarity[0][0]
 
 def get_llm_accuracy_score(question, real_answer, model_answer):
-    url = "https://api-inference.huggingface.co/models/google/gemma-3-27b-it"
+
+    return  "data from LLM"
+    url = "https://api-inference.huggingface.co/models/google/gemma-3-4b-it"
     headers = {"Authorization": f"Bearer {os.getenv('api_key')}"}
 
     prompt = (
@@ -84,8 +86,10 @@ async def insert_data_from_folder(rag, folder_path):
     """
     for root, dirs, files in os.walk(folder_path):
         for filename in files:
+            if str(filename) == ".DS_Store":
+                continue
+
             filepath = os.path.join(root, filename)
-            # Depending on your files, you may need more robust reading/parsing here
             try:
                 with open(filepath, 'r', encoding='utf-8') as f:
                     text_content = f.read().strip()
@@ -98,17 +102,17 @@ async def insert_data_from_folder(rag, folder_path):
 
 
 # Initialize LightRAG for different models
-async def initialize_rag(model_name="gemma2:2b"):
+async def initialize_rag(model_name,context_size=32768):
     """Initialize the LightRAG instance with a specified LLM backend."""
     rag = LightRAG(
-        working_dir="./working_dir",
+        working_dir=f"./working_dir",
         llm_model_func=ollama_model_complete,
         llm_model_name=model_name,
         llm_model_max_async=4,
-        llm_model_max_token_size=32768,
+        llm_model_max_token_size=context_size,
         llm_model_kwargs={
             "host": "http://localhost:11434",
-            "options": {"num_ctx": 32768},
+            "options": {"num_ctx": context_size},
         },
         embedding_func=EmbeddingFunc(
             embedding_dim=768,
@@ -142,7 +146,6 @@ async def benchmark_rag(rag, qa_data, model_name):
         start_time = time.time()
         hybrid_result = rag.query(question, param=QueryParam(mode="hybrid"))
         hybrid_time = time.time() - start_time
-        print("hybrid result", model_name," -- ", hybrid_result)
         # Compute fuzzy match and cosine similarity
         fuzzy_score = fuzzy_match_accuracy(hybrid_result, reference_answer)
         semantic_score = cosine_similarity_score(hybrid_result, reference_answer)
@@ -180,8 +183,10 @@ async def benchmark_models(models):
     qa_data = load_qa_data()
     all_results = []
 
-    for model_name in models:
-        rag = await initialize_rag(model_name)
+    for model in models:
+        model_name = model.get("name")
+        context_size = model.get("context_size")
+        rag = await initialize_rag(model_name,context_size)
         await insert_data_from_folder(rag, DATA_DIR)
         model_results = await benchmark_rag(rag, qa_data, model_name)
         all_results.extend(model_results)
@@ -199,8 +204,12 @@ def main():
     model_2 = "moondream"  # 1.4b
     model_3 = "llama3.2"  # 3b
 
-    models = [model_1,model_2,model_3]  # List of model names
-    asyncio.run(benchmark_models(models))
+    model_data = [
+        {"name":model_1,"context_size":16384},
+        {"name":model_2,"context_size":32768},
+        {"name":model_3,"context_size":16384},
+        ]
+    asyncio.run(benchmark_models(model_data))
 
 
 if __name__ == "__main__":
