@@ -10,16 +10,18 @@ from lightrag.llm.ollama import ollama_model_complete, ollama_embed
 from lightrag.utils import EmbeddingFunc
 from lightrag.kg.shared_storage import initialize_pipeline_status
 import logging
-# Initialize Sentence-BERT model
+import requests
 sentence_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 import nest_asyncio
 import asyncio
+from dotenv import load_dotenv
 
-# Apply nest_asyncio to allow running within an existing loop
+load_dotenv()
+
 nest_asyncio.apply()
 # Constants
-DATA_DIR = "./data"  # Path to data
-QA_FILE = "./qa.json"  # Path to QA file
+DATA_DIR = "./data1"  # Path to data
+QA_FILE = "./qa1.json"  # Path to QA file
 OUTPUT_FILE = "./benchmark_results.json"  # Output file for saving results
 
 # Custom encoder for numpy types
@@ -31,11 +33,6 @@ class NumpyEncoder(json.JSONEncoder):
 
 
 
-# Helper Functions for Accuracy Measurement
-def exact_match_accuracy(predicted_answer, reference_answer):
-    return predicted_answer.strip().lower() == reference_answer.strip().lower()
-
-
 def fuzzy_match_accuracy(predicted_answer, reference_answer):
     return fuzz.ratio(predicted_answer, reference_answer)
 
@@ -44,6 +41,60 @@ def cosine_similarity_score(predicted_answer, reference_answer):
     embeddings = sentence_model.encode([predicted_answer, reference_answer])
     similarity = cosine_similarity([embeddings[0]], [embeddings[1]])
     return similarity[0][0]
+
+def get_llm_accuracy_score(question, real_answer, model_answer):
+    url = "https://api-inference.huggingface.co/models/google/gemma-3-27b-it"
+    headers = {"Authorization": f"Bearer {os.getenv('api_key')}"}
+
+    prompt = (
+        f"Given the following question, real answer, and model's answer, "
+        f"please calculate the accuracy of the model's answer compared to the real answer. "
+        f"Accuracy should be between 0 and 1, where 1 indicates a perfect match, and 0 indicates no match. "
+        f"Return only accuracy nothing else.\n\n"
+        f"Question: {question}\n"
+        f"Real Answer: {real_answer}\n"
+        f"Model Answer: {model_answer}\n"
+        f"Accuracy: "
+    )
+    payload = {
+        "inputs": prompt
+    }
+
+    response = requests.post(url, json=payload, headers=headers)
+
+    if response.status_code == 200:
+        result = response.json()
+        print(result)
+        accuracy_score = result[0].get("generated_text", "").strip()
+        print(result,accuracy_score)
+        try:
+            accuracy_score = float(accuracy_score)
+            return max(0.0, min(1.0, accuracy_score))
+        except ValueError:
+            logging.error(f"Invalid accuracy score returned: {accuracy_score}")
+            return 0.0
+    else:
+        logging.error(f"Hugging Face API error: {response.status_code}")
+        return 0.0
+
+async def insert_data_from_folder(rag, folder_path):
+    """
+    Recursively traverse `folder_path`, read each file,
+    and insert its text content into RAG.
+    """
+    for root, dirs, files in os.walk(folder_path):
+        for filename in files:
+            filepath = os.path.join(root, filename)
+            # Depending on your files, you may need more robust reading/parsing here
+            try:
+                with open(filepath, 'r', encoding='utf-8') as f:
+                    text_content = f.read().strip()
+                    if text_content:
+                        rag.insert(text_content)
+                        logging.info(f"Inserted content from file: {filepath}")
+            except Exception as e:
+                logging.error(f"Could not read file {filepath}: {e}")
+
 
 
 # Initialize LightRAG for different models
@@ -91,10 +142,11 @@ async def benchmark_rag(rag, qa_data, model_name):
         start_time = time.time()
         hybrid_result = rag.query(question, param=QueryParam(mode="hybrid"))
         hybrid_time = time.time() - start_time
-
+        print("hybrid result", model_name," -- ", hybrid_result)
         # Compute fuzzy match and cosine similarity
         fuzzy_score = fuzzy_match_accuracy(hybrid_result, reference_answer)
         semantic_score = cosine_similarity_score(hybrid_result, reference_answer)
+        llm_score = get_llm_accuracy_score(question, reference_answer, hybrid_result)
 
         # Record the results
         record = {
@@ -105,6 +157,8 @@ async def benchmark_rag(rag, qa_data, model_name):
             "hybrid_time": hybrid_time,
             "fuzzy_score": fuzzy_score,
             "semantic_score": semantic_score,
+            "llm_score": llm_score,
+
         }
         results.append(record)
 
@@ -128,6 +182,7 @@ async def benchmark_models(models):
 
     for model_name in models:
         rag = await initialize_rag(model_name)
+        await insert_data_from_folder(rag, DATA_DIR)
         model_results = await benchmark_rag(rag, qa_data, model_name)
         all_results.extend(model_results)
 
