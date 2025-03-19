@@ -20,8 +20,8 @@ load_dotenv()
 
 nest_asyncio.apply()
 # Constants
-DATA_DIR = "./data1"  # Path to data
-QA_FILE = "./qa1.json"  # Path to QA file
+DATA_DIR = "./data"  # Path to data
+QA_FILE = "./qa.json"  # Path to QA file
 OUTPUT_FILE = "./benchmark_results.json"  # Output file for saving results
 
 # Custom encoder for numpy types
