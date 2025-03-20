@@ -20,9 +20,9 @@ load_dotenv()
 
 nest_asyncio.apply()
 # Constants
-DATA_DIR = "./data/bakery_deliver"  # Path to data
+DATA_DIR = "./data"  # Path to data
 QA_FILE = "./qa.json"  # Path to QA file
-OUTPUT_FILE = "./benchmark_results.json"  # Output file for saving results
+OUTPUT_FILE = "./benchmark_results_llama3.json"  # Output file for saving results
 
 # Custom encoder for numpy types
 class NumpyEncoder(json.JSONEncoder):
@@ -200,13 +200,13 @@ async def benchmark_models(models):
 
 
 def main():
-    model_1 = "gemma2:2b"  # 2b
-    model_2 = "moondream"  # 1.4b
+    # model_1 = "gemma2:2b"  # 2b
+    # model_2 = "moondream"  # 1.4b
     model_3 = "llama3.2"  # 3b
 
     model_data = [
-        {"name":model_1,"context_size":16384},
-        {"name":model_2,"context_size":32768},
+        # {"name":model_1,"context_size":16384},
+        # {"name":model_2,"context_size":32768},
         {"name":model_3,"context_size":16384},
         ]
     asyncio.run(benchmark_models(model_data))
