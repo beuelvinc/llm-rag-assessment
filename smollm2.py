@@ -20,9 +20,9 @@ load_dotenv()
 
 nest_asyncio.apply()
 # Constants
-DATA_DIR = "./data/bakery_deliver"  # Path to data
+DATA_DIR = "./data"  # Path to data
 QA_FILE = "./qa.json"  # Path to QA file
-OUTPUT_FILE = "./benchmark_results_moondream.json"  # Output file for saving results
+OUTPUT_FILE = "./benchmark_results_smollm2.json"  # Output file for saving results
 
 # Custom encoder for numpy types
 class NumpyEncoder(json.JSONEncoder):
@@ -190,7 +190,6 @@ async def benchmark_models(models):
         await insert_data_from_folder(rag, DATA_DIR)
         model_results = await benchmark_rag(rag, qa_data, model_name)
         all_results.extend(model_results)
-
     # Save the results to a JSON file
     with open(OUTPUT_FILE, 'w', encoding='utf-8') as out_f:
         # Ensure out_f is a text stream by using the correct file mode and encoding
@@ -201,7 +200,7 @@ async def benchmark_models(models):
 
 def main():
     # model_1 = "gemma2:2b"  # 2b
-    model_2 = "moondream"  # 1.4b
+    model_2 = "smollm2:1.7b"  # 1.7b
     # model_3 = "llama3.2"  # 3b
 
     model_data = [
