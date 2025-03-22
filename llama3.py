@@ -20,9 +20,11 @@ load_dotenv()
 
 nest_asyncio.apply()
 # Constants
-DATA_DIR = "./data"  # Path to data
+
+CONTEXT_SIZE = 16384/4
+DATA_DIR = "./subdata"  # Path to data
 QA_FILE = "./qa.json"  # Path to QA file
-OUTPUT_FILE = "./benchmark_results_llama3.json"  # Output file for saving results
+OUTPUT_FILE = f"./benchmark_results_llama3_{str(CONTEXT_SIZE)}.json"  # Output file for saving results
 
 # Custom encoder for numpy types
 class NumpyEncoder(json.JSONEncoder):
@@ -94,6 +96,8 @@ async def insert_data_from_folder(rag, folder_path):
                 with open(filepath, 'r', encoding='utf-8') as f:
                     text_content = f.read().strip()
                     if text_content:
+                        logging.info(f"inserting content from file: {filepath}")
+
                         rag.insert(text_content)
                         logging.info(f"Inserted content from file: {filepath}")
             except Exception as e:
@@ -206,8 +210,8 @@ def main():
 
     model_data = [
         # {"name":model_1,"context_size":16384},
-        # {"name":model_2,"context_size":32768},
-        {"name":model_3,"context_size":16384},
+        # {"name":model_2,"context_size":x},
+        {"name":model_3,"context_size":CONTEXT_SIZE},
         ]
     asyncio.run(benchmark_models(model_data))
 

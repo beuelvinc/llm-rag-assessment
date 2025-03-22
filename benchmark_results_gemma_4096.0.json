@@ -1,0 +1,302 @@
+[
+    {
+        "model_name": "gemma2:2b",
+        "question": "Who delivered the bread from Hailey's bakery?",
+        "reference_answer": "Alice delivered the bread from Hailey's bakery.",
+        "hybrid_answer": "Please provide me with more context! I need to know which story or movie you are referring to. \n\nFor example, tell me:\n\n* **What book/movie/TV show is this about?**  \n* **Any other details you remember about the situation.**\n\n\nThe more information you give me, the better chance I have of helping! 😊  \n",
+        "hybrid_time": 2.969435930252075,
+        "fuzzy_score": 12,
+        "semantic_score": 0.049277279525995255,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What time did LiHua and WolfgangSchulz agree to meet for the photography walk?",
+        "reference_answer": "They agreed to meet at 3 PM.",
+        "hybrid_answer": "Please provide more context! I need information about who LiHua and WolfgangSchulz are and what photography walk you're referring to. \n\nFor example, tell me:\n\n* **Where did you hear about this meeting?** Was it an online forum, a social media post, or somewhere else?\n* **Do you have any other details about LiHua and WolfgangSchulz?**  This could include their connection, location, etc.\n \nWith more information, I can try to find the time of their agreement for the photography walk! \n",
+        "hybrid_time": 4.287300109863281,
+        "fuzzy_score": 6,
+        "semantic_score": 0.19859002530574799,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What is the Wi-Fi password Adam provided to LiHua?",
+        "reference_answer": "The Wi-Fi password is 'Family123'.",
+        "hybrid_answer": "Please provide me with more context! I need information about:\n\n* **Adam and LiHua:**  Tell me who they are, their relationship (are they friends, family members?), or any other relevant details. \n* **The story/scenario:** Is this from a book, movie, TV show, real life? The more details you give me, the better I can understand and answer your question.\n\nOnce you provide that information, I can help! 😊 \n",
+        "hybrid_time": 3.330686330795288,
+        "fuzzy_score": 7,
+        "semantic_score": 0.014978714287281036,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What house rule did Adam mention to LiHua?",
+        "reference_answer": "Adam asked LiHua to keep noise to a minimum during late hours and take good care of the property.",
+        "hybrid_answer": "Please provide more context! I need information like:\n\n* **Where is this from?** Is this a specific book, TV show, game, or something else entirely? \n* **Who are Adam and LiHua?** This helps me understand the characters and their relationship. \n* **What kind of house rules are we talking about?**  Are these for a game, for a fictional world, a personal rule set, etc.?\n\nThe more context you give me, the better I can help! 😊 \n",
+        "hybrid_time": 3.609316110610962,
+        "fuzzy_score": 17,
+        "semantic_score": 0.2991502285003662,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "Which gym did WolfgangSchulz recommend to LiHua?",
+        "reference_answer": "WolfgangSchulz recommended a gym called FitZone.",
+        "hybrid_answer": "Unfortunately, I don't have access to real-world information like personal recommendations.  It would be difficult for me to know what gym Wolfgang Schulz might have recommended to LiHua. \n\nTo get the answer you are looking for, try these methods:\n\n* **Check if they both publicly share recommendations:** Some individuals share their go-to gym suggestions on social media platforms or in blogs/articles.\n* **Contact them directly:** If you know how to contact them, reach out and ask!\n\n\nLet me know if you have any other questions that don't require real-world information! \n",
+        "hybrid_time": 3.8635411262512207,
+        "fuzzy_score": 12,
+        "semantic_score": 0.444508820772171,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What class did WolfgangSchulz try at FitZone?",
+        "reference_answer": "He tried a kickboxing class.",
+        "hybrid_answer": "Unfortunately, I don't have access to real-time information about people's workout routines or personal details like what classes Wolfgang Schulz attends at FitZone. \n\nIt's important to respect people's privacy and not share that type of personal information without their consent.  \n\n\nLet me know if you have any other general questions about fitness or exercise! 😊 💪 \n",
+        "hybrid_time": 3.036102771759033,
+        "fuzzy_score": 7,
+        "semantic_score": 0.22563692927360535,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What time is the plumber arriving to fix the water tap?",
+        "reference_answer": "The plumber is arriving at 10 AM.",
+        "hybrid_answer": "I do not have access to real-time information, including appointment schedules. \n\nTo find out the arrival time of your plumber: \n\n* **Check your appointment confirmation:** Look for any emails or texts you received confirming the appointment. \n* **Call the plumbing company:**  If you haven't received a confirmation, call their customer service number to get an update on your scheduled time.\n\n\nI hope this helps! \n",
+        "hybrid_time": 3.3491880893707275,
+        "fuzzy_score": 12,
+        "semantic_score": 0.5844947695732117,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What issue did LiHua report about the door?",
+        "reference_answer": "LiHua reported that the door hinge was squeaking.",
+        "hybrid_answer": "Please provide me with some context! I need to know **who** LiHua is and **where** this information comes from. \n\nFor example, tell me: \n\n* Is LiHua a character in a book you're reading?  \n* Is she a real person you're talking about?\n* Is this related to a specific topic or situation?\n\n\nThe more information you give me, the better I can help! 😄 \n",
+        "hybrid_time": 3.2978031635284424,
+        "fuzzy_score": 14,
+        "semantic_score": 0.26319801807403564,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What did Adam say about having friends over?",
+        "reference_answer": "Adam said having friends over occasionally is fine as long as the gatherings are reasonable.",
+        "hybrid_answer": "Adam, from the Bible, is a character who's mentioned in several accounts of his life. \n\nThe story of **Genesis**, particularly the first chapter, describes how Adam and Eve lived in paradise before sin entered the world. They were completely alone for their first few years. However, it's important to remember that:\n\n* **No direct mention of \"friends\"**:  There's no explicit text stating Adam had a desire for friends in a modern sense of gathering people together like we do today.\n* **Genesis doesn't offer details**: The focus is on creation and early human relationships with God, not specific social interactions.\n\nWhile we don't have exact details about what Adam might say if he were to invite friends over, here are some ways to interpret his possible actions:\n\n**1.  Adam being a provider:**\n* He likely wouldn't need to \"invite\" friends because they would be drawn to him and Eve by their presence of goodness and the natural harmony in their lives. \n\n**2. Adam representing humans as God intended:**\n* The story might suggest that Adam, being formed in the image of God, would naturally have a peaceful disposition towards others and invite companionship when suitable for his situation.\n\n **3. A focus on spiritual connection**: \n* Genesis doesn't just speak of physical relationships but emphasizes sharing life with God as their source of support. This might be a different approach to social interaction than what we understand today. \n\nIt's worth noting that interpretations vary widely among religious and philosophical perspectives, leading to diverse understandings of Adam's character and life story.\n",
+        "hybrid_time": 7.519891023635864,
+        "fuzzy_score": 8,
+        "semantic_score": 0.3224639892578125,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What local event did WolfgangSchulz tell LiHua about?",
+        "reference_answer": "He mentioned a local festival downtown with food stalls and live music.",
+        "hybrid_answer": "Please provide me with more context!  I need to know who Wolfgang Schulz and Li Hua are.  \n\nFor example: \n\n* **Are they characters in a book, movie, or TV show?** Please let me know the name of the work so I can search for relevant information. \n* **Are they real people you're discussing?** If so, please tell me more about them (their profession, location, etc.) so I can narrow down my search.\n\nThe more details you provide, the better chance I have of helping you find out what local event Wolfgang Schulz told Li Hua about! \n",
+        "hybrid_time": 4.0027830600738525,
+        "fuzzy_score": 8,
+        "semantic_score": 0.26605165004730225,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "At what time did WolfgangSchulz and LiHua plan to meet for the festival?",
+        "reference_answer": "They planned to meet at 2 PM.",
+        "hybrid_answer": "Please provide me with more context! I need information about:\n\n* **The festival:**  What is the name of the festival? Where is it located? \n* **Wolfgang Schulz and Li Hua:** What are their roles in this festival? Are they attendees, organizers, or performers? \n\nWith more details, I can search for their meeting plans. 😊 \n",
+        "hybrid_time": 2.9660680294036865,
+        "fuzzy_score": 11,
+        "semantic_score": 0.19480818510055542,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "Where did WolfgangSchulz and LiHua plan to have lunch?",
+        "reference_answer": "They planned to have lunch at a cozy café downtown.",
+        "hybrid_answer": "Please provide me with more context! I need to know who \"Wolfgang Schulz\" and \"Li Hua\" are in order to answer your question.  \n\nFor example: \n\n* Are they characters from a book or movie? \n* Do you work with them, or just want to know where a hypothetical lunch might take place? \n\nOnce you give me some more information, I can help you find the answer! 😊 \n",
+        "hybrid_time": 3.2708632946014404,
+        "fuzzy_score": 16,
+        "semantic_score": 0.3292812705039978,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What meal was LiHua planning to order at lunch?",
+        "reference_answer": "LiHua was planning to order a burger.",
+        "hybrid_answer": "Please provide me with the context for this question! I need more information about who LiHua is and where this conversation is taking place. \n\nFor example, you could tell me:\n\n* **LiHua's name:** Is she from a book, movie, TV show?  \n* **Where are they?**: Are we talking about the real world or a fictional setting? What kind of location is it (restaurant, school cafeteria, etc.)? \n* **The plot:** What is happening in the scene where LiHua's lunch plan comes up?\n\nOnce I have more details, I can help you figure out what meal LiHua planned to order! \n",
+        "hybrid_time": 4.005933046340942,
+        "fuzzy_score": 8,
+        "semantic_score": 0.4620150625705719,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What maintenance issue did LiHua report about the water tap?",
+        "reference_answer": "LiHua reported that the water tap was broken.",
+        "hybrid_answer": "Please provide me with more context! I need to know who LiHua is and where you found this information. \n\nFor example, tell me: \n\n* **Where did you see this mention of LiHua and the water tap?** (e.g., a website, an article, a document)\n* **What kind of information are you looking for about the maintenance issue?** (e.g., what type of tap is it, what was wrong with it)\n\nOnce I have this information, I can help you! 😊 \n",
+        "hybrid_time": 3.7976717948913574,
+        "fuzzy_score": 16,
+        "semantic_score": 0.5061322450637817,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "Where did WolfgangSchulz suggest for taking great photos?",
+        "reference_answer": "He suggested the park by the river, the old town square, and the observation deck.",
+        "hybrid_answer": "Wolfgang Schulz, a renowned photographer and educator, believed in the importance of **\"finding your own voice\"** when taking photographs. He emphasized that there's no one-size-fits-all approach and encouraged photographers to: \n\n* **Find their individual style:** Experiment, explore different perspectives, and develop unique artistic approaches.\n* **Trust their intuition:** Don't be afraid to take risks, push boundaries, and follow what feels right in the moment.\n* **Connect with subjects:** See the world through your own eyes and find inspiration in everyday life.\n\nWhile he didn't provide specific \"locations\" for taking great photos, his teachings centered on developing a strong personal connection with photography and pushing beyond the conventional. \n\n\n**Instead of focusing on fixed locations, his philosophy emphasized the following:**\n\n* **Observe & Explore:** The world offers countless subjects that inspire us. Take time to appreciate details, explore different environments, and find your own unique inspiration.\n* **Embrace Simplicity:**  Don't get caught up in fancy equipment or complicated techniques. Focus on capturing moments authentically, even with simple tools and settings. \n\n**His teachings encourage a lifelong journey of exploration, learning, and expression.** \n\n\nIf you want to delve deeper into his thoughts, you can find them through: \n* **Books:** \"The Art of Photography\" (written by him) - A comprehensive guide on photography basics & practice.  \n* **Websites:** Explore dedicated websites that showcase his work or provide insights into his philosophies and teachings. \n\n\nRemember, taking great photos is about finding your own artistic voice and expressing yourself through the lens. \n",
+        "hybrid_time": 7.650619983673096,
+        "fuzzy_score": 6,
+        "semantic_score": 0.09893588721752167,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What did LiHua accidentally break in the apartment?",
+        "reference_answer": "LiHua accidentally broke a light fixture.",
+        "hybrid_answer": "Please provide me with more context! I need to know about LiHua and her apartment.  \n\nFor example, tell me:\n\n* **Are there any specific details you can give me about LiHua or the situation?** \n    * Is she young or old?  What kind of apartment does she live in? Does she have pets?\n* **Is this from a story you're writing, a movie, TV show, or something else?**\n    * If so, where can I find more information about the characters and plot?\n\nWith more information, I can help you figure out what LiHua accidentally broke! \n",
+        "hybrid_time": 3.9383649826049805,
+        "fuzzy_score": 9,
+        "semantic_score": 0.4232273995876312,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "When did LiHua suggest having lunch with WolfgangSchulz after arriving in the city?",
+        "reference_answer": "LiHua suggested having lunch on the 8th.",
+        "hybrid_answer": "Please provide me with context!  I need to know who LiHua and Wolfgang Schulz are, where this is happening, and what kind of story we're talking about. \n\nFor example:\n\n* **Is this from a book, movie, or TV show?** \n    * If so, please tell me the title. \n* **Do you have any details about the characters?**\n    * Their professions, ages, anything that might help me identify them.\n* **Where did you encounter this idea of LiHua and Wolfgang Schulz having lunch?** \n    *  Was it in a scene from a story, a conversation online, etc.?\n\nThe more information you can give me, the better I'll be able to answer your question! \n",
+        "hybrid_time": 4.537791013717651,
+        "fuzzy_score": 11,
+        "semantic_score": 0.3648768663406372,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "How can LiHua report a maintenance issue to Adam?",
+        "reference_answer": "LiHua can send a message to Adam on WhatsApp or call him directly for urgent issues.",
+        "hybrid_answer": "Here's a breakdown of how LiHua could report a maintenance issue to Adam, considering different approaches and situations:\n\n**1. Direct Communication (Best for Urgent Issues)**\n\n* **Contact Information:** If they have Adam's contact information (e.g., email address or phone number), LiHua can directly send an email or call him with the issue. \n    * **Example Email:** Subject: Maintenance Issue - [Specific Location/Area of Issue]\n    * **Details to Include:**  Clear description of the issue, location (if applicable), time it started, and any other relevant information.\n* **In-Person Contact:** If they are nearby Adam, a quick visit might be the most efficient method for urgent matters.\n\n**2. System-Based Reporting (Formal or Routine Issues)** \n\n* **Automated Maintenance Platform:**  If LiHua's company or building has a dedicated maintenance platform, she should utilize it to report the issue:\n    * **Follow Platform Instructions:** Look for specific steps on how to file a maintenance request. This often involves selecting the \"Report Issue\" or \"Maintenance Request\" button. \n* **Dedicated Maintenance Phone Line:** Many companies have phone numbers dedicated to submitting maintenance requests.\n\n**3. Communication with Other Team Members (For Complex Issues)**\n\n* **Point of Contact:** LiHua can ask a colleague working in Adam's department if they know who handles maintenance or provide contact information for Adam's team.  \n* **Escalation Process:** If the issue needs to be escalated, LiHua should follow the established escalation procedure within their company. This might involve seeking assistance from a supervisor or manager. \n\n\n**Essential Tips:**\n\n* **Clear and Concise:** Use clear language, avoid technical jargon, and write in a straightforward manner.\n* **Detailed Description:**  Provide specific details about the issue (what it is, where it's located, when it started).\n* **Pictures or Videos (if possible):** If applicable, capturing visual evidence of the problem could help expedite Adam's response. \n* **Contact Information:** Provide LiHua's contact information for follow-up communication.\n\n\nLet me know if you have any specific information about LiHua and Adam's work environment.  I can offer more tailored advice! ",
+        "hybrid_time": 10.129157066345215,
+        "fuzzy_score": 5,
+        "semantic_score": 0.6164283156394958,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What did LiHua thank Adam for arranging?",
+        "reference_answer": "LiHua thanked Adam for arranging the door hinge repair.",
+        "hybrid_answer": "Please provide me with the context of this question. I need to know what story or situation you're referring to so I can answer your question about LiHua thanking Adam for something he arranged. \n\nFor example, tell me:\n\n* **Where did you hear about this situation?** (Is it a book, movie, TV show, etc.)\n* **Any other details about the characters or plot that might help!** \n\n\nOnce I have this information, I can answer your question accurately. 😊  \n",
+        "hybrid_time": 3.525834083557129,
+        "fuzzy_score": 18,
+        "semantic_score": 0.4132383465766907,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "Where did LiHua and WolfgangSchulz plan to go for their photography adventure?",
+        "reference_answer": "They planned to explore the city, including the park by the river and old town square.",
+        "hybrid_answer": "Unfortunately, I don't have access to real-time information about individuals like LiHua and WolfgangSchulz. \n\nTo find out where they planned to go on their photography adventure, you could try:\n\n* **Checking their social media accounts:** Many photographers share their travel plans or destinations on platforms like Instagram, Facebook, or YouTube.\n* **Searching for articles or interviews:** Look for press releases, blog posts, or articles mentioning their photography journey. \n* **Contacting them directly:** If you have contact information, reaching out to them directly might be the best option.\n\nGood luck finding out where they were headed! 😊  \n",
+        "hybrid_time": 3.954525947570801,
+        "fuzzy_score": 15,
+        "semantic_score": 0.2406836748123169,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What was Adam doing on weekends?",
+        "reference_answer": "Adam mentioned that he was busy with work but enjoyed spending quality time with family on weekends.",
+        "hybrid_answer": "You're asking about Adam, and I need a bit more context to answer! \n\n**Please tell me:**\n\n* **Who is Adam?**  Is this from a book, movie, TV show, or something else entirely?  \n* **What kind of story are we talking about?** Is it a historical context, fantasy world, or something else?\n\n\nOnce you give me that information, I can help you figure out what Adam was doing on weekends! 😊 \n",
+        "hybrid_time": 3.8218698501586914,
+        "fuzzy_score": 18,
+        "semantic_score": 0.4963483214378357,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What did LiHua discover in the city?",
+        "reference_answer": "LiHua found a cool café with great coffee and a local art gallery worth visiting.",
+        "hybrid_answer": "Please provide me with more context! I need to know which \"LiHua\" you're referring to.  \n\nFor example:\n\n* **Is this from a book, movie, TV show, or game?** (Tell me the title!)\n* **Are you talking about a real person named LiHua?** (Please give more information about them.) \n\n\nOnce I have that information, I can tell you what LiHua discovered in the city! 😊 \n",
+        "hybrid_time": 3.260132074356079,
+        "fuzzy_score": 13,
+        "semantic_score": 0.33380475640296936,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What did WolfgangSchulz say about the staff at FitZone?",
+        "reference_answer": "He mentioned that the staff at FitZone were really helpful.",
+        "hybrid_answer": "I do not have access to real-time information, including private conversations or statements by individuals like Wolfgang Schulz.  \n\nTo get information about what Wolfgang Schulz might have said about FitZone's staff, you could try these options:\n\n* **Search for interviews or articles:** Look for online publications or news sources that might have featured him and discuss his thoughts on FitZone or fitness professionals in general.\n* **Check social media:** See if any mentions of him discussing FitZone appear on platforms like Twitter or LinkedIn. \n* **Contact FitZone directly:** Reach out to them to inquire about their relationship with Wolfgang Schulz and if they are willing to share any insights into his opinions.\n\n\nPlease remember that respecting individuals' privacy is important, and not all information will be publically available. \n",
+        "hybrid_time": 4.52814507484436,
+        "fuzzy_score": 8,
+        "semantic_score": 0.5144786834716797,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What kind of food was WolfgangSchulz in the mood for at lunch?",
+        "reference_answer": "He was in the mood for something warm and hearty, like soup or a sandwich.",
+        "hybrid_answer": "This is a trick question!  You're likely thinking about **Wolfgang Puck**, the famous chef. \n\n**There is no public information about what specific kind of food Wolfgang Puck himself felt like eating at lunch.** \n\n\nIt's important to remember that:\n\n* **Food preferences are personal:** We can only guess what a person might crave at any given time, even if they're a famous chef! \n* **Public figures don't always share their meals publicly:** They may enjoy a simple sandwich or something elaborate, and it's not their business to tell everyone.  \n\nLet me know if you have other fun questions about food! 🍲 🍟 🍰 \n",
+        "hybrid_time": 4.5524561405181885,
+        "fuzzy_score": 13,
+        "semantic_score": 0.3535904884338379,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What was WolfgangSchulz’s reason for going to the gym?",
+        "reference_answer": "He said it was a great way to clear his head after coding all day.",
+        "hybrid_answer": "Wolfgang Schulz, a prominent German sociologist and philosopher, didn't go to the gym in the same way we think of it. He is known for his work on **post-structuralism** and **critical theory**, which focus on analyzing power structures, social norms, and their impact on individuals. \n\nSo, while he might have engaged in physical activity as part of a healthy lifestyle, it wasn't primarily for the reasons we associate with typical gym visits:\n\n* **He was likely focused on mental and intellectual health.**  \n* **His work involved deep thought and analysis.**\n* **Physical activity might have been part of a holistic approach to self-care and well-being.**\n\n\nIt is important to note that speculating about someone's motivations based on limited information can be misleading. \n",
+        "hybrid_time": 4.798827171325684,
+        "fuzzy_score": 12,
+        "semantic_score": 0.08856359124183655,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What is the tallest building in the city?",
+        "reference_answer": "The answer is not present in the text.",
+        "hybrid_answer": "Please tell me what city you are asking about!  🌎 \n\nFor example, you could ask:\n\n* What is the tallest building in **New York City**?\n* What is the tallest building in **London**? \n\n\nI'm ready to help once I know which city you're interested in! 😄  \n",
+        "hybrid_time": 2.9507319927215576,
+        "fuzzy_score": 14,
+        "semantic_score": -0.01045304350554943,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "Who won the last local marathon?",
+        "reference_answer": "The answer is not present in the text.",
+        "hybrid_answer": "Please tell me which local marathon you are referring to!  \n\nI need the location of the marathon to answer this question. 🌎🏃‍♀️ \nFor example, you could say: \n* \"Who won the last Boston Marathon?\" \n* \"Who won the [City Name] Marathon?\" \n\n\nLet me know and I can help you find out! 😊 \n",
+        "hybrid_time": 3.0176310539245605,
+        "fuzzy_score": 16,
+        "semantic_score": -0.0072286706417799,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What is the best-rated restaurant in the city?",
+        "reference_answer": "The answer is not present in the text.",
+        "hybrid_answer": "Please tell me what city you're interested in!  \n\nI need to know the location of the city to find its best-rated restaurants. 😉 🌎  \n",
+        "hybrid_time": 2.5089478492736816,
+        "fuzzy_score": 20,
+        "semantic_score": -0.10190632939338684,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "Which museum has the largest art collection here?",
+        "reference_answer": "The answer is not present in the text.",
+        "hybrid_answer": "Please tell me **where** you are interested in!  I need a location to tell you which museum has the largest art collection. 🗺️ \n\nFor example, you could say:\n\n* \"Which museum has the largest art collection in **New York City**?\"\n* \"Which museum has the largest art collection in **Europe**?\"\n* \"Which museum has the largest art collection **in the United States**?\"\n\n\nOnce you give me a location, I can help you! 😊 \n",
+        "hybrid_time": 3.413749933242798,
+        "fuzzy_score": 11,
+        "semantic_score": -0.14070048928260803,
+        "llm_score": "0"
+    },
+    {
+        "model_name": "gemma2:2b",
+        "question": "What is the average rent for an apartment in the city?",
+        "reference_answer": "The answer is not present in the text.",
+        "hybrid_answer": "Please provide me with the **city** you're interested in! 🏙️  \n\nFor example, you could ask: \"What is the average rent for an apartment in **New York City**?\" or \"What is the average rent for an apartment in **San Francisco**?\".  \n\nOnce you tell me the city, I can help you find that information. 😊 \n",
+        "hybrid_time": 3.0290470123291016,
+        "fuzzy_score": 17,
+        "semantic_score": -0.018168995156884193,
+        "llm_score": "0"
+    }
+]
