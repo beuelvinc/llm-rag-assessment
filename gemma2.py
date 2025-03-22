@@ -20,9 +20,10 @@ load_dotenv()
 
 nest_asyncio.apply()
 # Constants
-DATA_DIR = "./data"  # Path to data
+CONTEXT_SIZE = 16384/4
+DATA_DIR = "./subdata"  # Path to data
 QA_FILE = "./qa.json"  # Path to QA file
-OUTPUT_FILE = "./benchmark_results_gemma.json"  # Output file for saving results
+OUTPUT_FILE = f"./benchmark_results_gemma_{str(CONTEXT_SIZE)}.json"  # Output file for saving results
 
 # Custom encoder for numpy types
 class NumpyEncoder(json.JSONEncoder):
@@ -203,7 +204,7 @@ def main():
     model_1 = "gemma2:2b"  # 2b
 
     model_data = [
-        {"name":model_1,"context_size":16384},
+        {"name":model_1,"context_size":CONTEXT_SIZE},
         ]
     asyncio.run(benchmark_models(model_data))
 

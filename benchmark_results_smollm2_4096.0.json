@@ -1,0 +1,302 @@
+[
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "Who delivered the bread from Hailey's bakery?",
+        "reference_answer": "Alice delivered the bread from Hailey's bakery.",
+        "hybrid_answer": "According to the Knowledge Base, it was Alice who delivered the bread from Hailey's bakery. She is mentioned as \"Alice: I am Alice from Hailey's bakery.\" This indicates that Alice handled the delivery of the bread and provided assistance for it at the end.",
+        "hybrid_time": 6.447102069854736,
+        "fuzzy_score": 31,
+        "semantic_score": 0.8690686821937561,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What time did LiHua and WolfgangSchulz agree to meet for the photography walk?",
+        "reference_answer": "They agreed to meet at 3 PM.",
+        "hybrid_answer": "In order to find this out, we need to look at the conversation history of LiHua and WolfgangSchulz. From their previous conversations, it's clear that they have agreed on meeting at 3 PM. This can be seen in the following text:\n\n \"LiHua: Hey Adam! Hope you're doing well. Just wanted to ask for the Wi-Fi password when you get a chance. Also, are there any house rules I should know about? Thanks!\"\nAdamSmith: Sure! The Wi-Fi password is \"Family123\".\n\nBased on this information, it can be concluded that LiHua and WolfgangSchulz agreed to meet for the photography walk at 3 PM.",
+        "hybrid_time": 9.33284306526184,
+        "fuzzy_score": 9,
+        "semantic_score": 0.36467304825782776,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What is the Wi-Fi password Adam provided to LiHua?",
+        "reference_answer": "The Wi-Fi password is 'Family123'.",
+        "hybrid_answer": "As per the Knowledge Base, AdamSmith provided the Wi-Fi password as \"Family123\" when responding to LiHua's request for a Wi-Fi password at an unknown location.",
+        "hybrid_time": 4.964068174362183,
+        "fuzzy_score": 32,
+        "semantic_score": 0.7268378138542175,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What house rule did Adam mention to LiHua?",
+        "reference_answer": "Adam asked LiHua to keep noise to a minimum during late hours and take good care of the property.",
+        "hybrid_answer": "In the conversation history, AdamSmith mentioned a few rules for LiHua at Hailey's bakery:\n\n1. Please keep noise to a minimum during late hours and try to maintain a peaceful environment for other customers.\n2. If you have any questions or concerns regarding your experience, don't hesitate to contact them.",
+        "hybrid_time": 5.50519585609436,
+        "fuzzy_score": 36,
+        "semantic_score": 0.4919142425060272,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "Which gym did WolfgangSchulz recommend to LiHua?",
+        "reference_answer": "WolfgangSchulz recommended a gym called FitZone.",
+        "hybrid_answer": "WolfgangSchulz recommended a gyms called FitZone which is located near LiHua's home and has various classes including kickboxing, which might be a good fit for her interests in staying active.",
+        "hybrid_time": 3.1575911045074463,
+        "fuzzy_score": 40,
+        "semantic_score": 0.7016288638114929,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What class did WolfgangSchulz try at FitZone?",
+        "reference_answer": "He tried a kickboxing class.",
+        "hybrid_answer": "Based on the knowledge base, WolfgangSchulz tried a kickboxing class at FitZone. He mentioned that it was intense but fun and suggested LiHua might like it as well. However, since the conversation history has not been updated recently to include more recent interactions between the users or additional context about their interests in gyms and fitness classes, I cannot provide an exact description of the class or any specific details such as its popularity, reviews, or ratings.",
+        "hybrid_time": 4.3221821784973145,
+        "fuzzy_score": 11,
+        "semantic_score": 0.6558979153633118,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What time is the plumber arriving to fix the water tap?",
+        "reference_answer": "The plumber is arriving at 10 AM.",
+        "hybrid_answer": "Based on the Knowledge Base, I found that AdamSmith said he will arrange for a repair at 10 AM tomorrow. So, the plumber should be arriving around 10 AM. Please make sure you are ready with necessary tools and information before then.",
+        "hybrid_time": 5.457902193069458,
+        "fuzzy_score": 22,
+        "semantic_score": 0.7009183764457703,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What issue did LiHua report about the door?",
+        "reference_answer": "LiHua reported that the door hinge was squeaking.",
+        "hybrid_answer": "LiHua reported that she accidentally broke a light fixture in her apartment and is seeking advice on what to do next regarding repairing or replacing it.",
+        "hybrid_time": 2.2267448902130127,
+        "fuzzy_score": 37,
+        "semantic_score": 0.3645821213722229,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What did Adam say about having friends over?",
+        "reference_answer": "Adam said having friends over occasionally is fine as long as the gatherings are reasonable.",
+        "hybrid_answer": "From LiHua's message to Adam: \"I would love to have friends over occasionally! What time were you thinking?\"\n\nAdamSmith responded with this information: \"How about we meet around 3? Gives us plenty of time to explore before sunset!\"",
+        "hybrid_time": 5.21816086769104,
+        "fuzzy_score": 33,
+        "semantic_score": 0.4643539786338806,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What local event did WolfgangSchulz tell LiHua about?",
+        "reference_answer": "He mentioned a local festival downtown with food stalls and live music.",
+        "hybrid_answer": "WolfgangSchulz mentioned that he recommended a \"gyms or fitness centers around here\" to LiHua, specifically FitZone, which has several classes and all the equipment she would need. He also expressed his belief that it's a great way to stay active. So, WolfgangSchulz told LiHua about FitZone as an option for a gym or fitness center in the area.",
+        "hybrid_time": 6.28939414024353,
+        "fuzzy_score": 17,
+        "semantic_score": 0.20513486862182617,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "At what time did WolfgangSchulz and LiHua plan to meet for the festival?",
+        "reference_answer": "They planned to meet at 2 PM.",
+        "hybrid_answer": "Based on the conversation history, it appears that WolfgangSchulz proposed a meeting at 3 PM on a specific date, while LiHua confirmed this with him, mentioning plans to visit a caf he recommended. However, no exact time or date is mentioned in the provided Knowledge Base. To determine the exact timing of their meeting, I would need additional information from another source.",
+        "hybrid_time": 6.204368829727173,
+        "fuzzy_score": 9,
+        "semantic_score": 0.5314675569534302,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "Where did WolfgangSchulz and LiHua plan to have lunch?",
+        "reference_answer": "They planned to have lunch at a cozy café downtown.",
+        "hybrid_answer": "Based on the knowledge base, WolfgangSchulz and LiHua were discussing plans for a photography walk around 3 PM. It is mentioned that WolfgangSchulz suggested meeting there at that time, giving them enough time before sunset. Therefore, it can be inferred that they planned to have lunch near the location where they would meet up for the photography walk.",
+        "hybrid_time": 6.165989875793457,
+        "fuzzy_score": 19,
+        "semantic_score": 0.47676149010658264,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What meal was LiHua planning to order at lunch?",
+        "reference_answer": "LiHua was planning to order a burger.",
+        "hybrid_answer": "Based on the conversation history and the knowledge from the Knowledge Base, LiHua is planning to order a meal for her photography walk. Here's the relevant information:\n\n1. \"LiHua: Hey Adam! Hope youre doing well. I wanted to ask if its possible to get a small repair done on the door hinge? Its been squeaking quite a bit.\"\n2. \"AdamSmith: Hi Li Hua! Sure, I can arrange for that repair. Would you prefer a specific time for the maintenance to be done?\n3. \"LiHua: Thanks, Adam! Im flexible, so just let me know when works best for the maintenance guy. My schedule's pretty open!\"\n4. \"AdamSmith: Great! Ill coordinate with the repair service and keep you posted. Shouldn't take long to fix.\"\n5. \"LiHua: Sounds good! Appreciate it, Adam. Just let me know when they're coming. Cheers!\"\n\nFrom these conversations, we can infer that LiHua is planning to order a meal for her photography walk at lunch.",
+        "hybrid_time": 10.334028959274292,
+        "fuzzy_score": 7,
+        "semantic_score": 0.5223599672317505,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What maintenance issue did LiHua report about the water tap?",
+        "reference_answer": "LiHua reported that the water tap was broken.",
+        "hybrid_answer": "According to the conversation history and knowledge base:\n\nLiHua reported that she accidentally broke a light fixture in her apartment and asked AdamSmith for guidance on what maintenance issue it might be related to regarding the water tap. AdamSmith mentioned arranging for a plumber to fix the water tap at 10 AM the next day, confirming that the repair is needed due to the squeaking sound from the door hinge.",
+        "hybrid_time": 6.39028787612915,
+        "fuzzy_score": 18,
+        "semantic_score": 0.6863407492637634,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "Where did WolfgangSchulz suggest for taking great photos?",
+        "reference_answer": "He suggested the park by the river, the old town square, and the observation deck.",
+        "hybrid_answer": "WolfgangSchulz suggested that LiHua take her photos at FitZone, a gym and fitness center in the area. He mentioned that it's a nice place with all the equipment she needs to stay active and has a vibe that is \"really chill.\"\n\n---",
+        "hybrid_time": 5.463889122009277,
+        "fuzzy_score": 25,
+        "semantic_score": 0.13772739470005035,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What did LiHua accidentally break in the apartment?",
+        "reference_answer": "LiHua accidentally broke a light fixture.",
+        "hybrid_answer": "LiHua inadvertently broke a light fixture in her apartment. The specific item she accidentally damaged is unknown from the given knowledge base, but it could be something like a ceiling light or a table lamp. In any case, the user should consult with a professional for repair services and follow their recommendations to avoid further damage.",
+        "hybrid_time": 5.732126235961914,
+        "fuzzy_score": 19,
+        "semantic_score": 0.7862629294395447,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "When did LiHua suggest having lunch with WolfgangSchulz after arriving in the city?",
+        "reference_answer": "LiHua suggested having lunch on the 8th.",
+        "hybrid_answer": "Unfortunately, the Knowledge Base does not contain specific information about when LiHua suggested having lunch with WolfgangSchulz after her arrival in the city. As I am designed to analyze and generate responses based on provided knowledge bases, I do not have real-time access to additional data or conversation history beyond what is available in the given Knowledge Base. I recommend checking the conversation history for more details about this specific event or asking the user for clarification if they know the answer.",
+        "hybrid_time": 4.153982877731323,
+        "fuzzy_score": 14,
+        "semantic_score": 0.5454267263412476,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "How can LiHua report a maintenance issue to Adam?",
+        "reference_answer": "LiHua can send a message to Adam on WhatsApp or call him directly for urgent issues.",
+        "hybrid_answer": "To report a maintenance issue to Adam, LiHua should follow these steps:\n\n1. Identify the Problem: Determine what needs fixing or repair. In this case, it's the broken light fixture in her apartment.\n\n2. Contact Adam: Reach out to Adam directly and let him know about the problem. He can guide you on how to go about reporting the issue.\n\n3. Provide Information: LiHua should provide as much relevant information as possible about the problem. In this case, she could mention that a light fixture in her apartment has broken down and that she needs assistance with its repair or replacement.\n\nHere's an example of how LiHua can report the issue to Adam:\n\n\"Hi Adam, I hope you're doing well! I just wanted to let you know about a maintenance issue in my apartment. The light fixture has broken down, and I need some assistance getting it fixed. Could we schedule the repair or replacement as soon as possible? It would really help me out and make things easier.\"\n\nRemember to be patient and understanding if Adam asks for more details or clarification on how the problem occurred or what he can do about it.",
+        "hybrid_time": 10.676349878311157,
+        "fuzzy_score": 9,
+        "semantic_score": 0.49971070885658264,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What did LiHua thank Adam for arranging?",
+        "reference_answer": "LiHua thanked Adam for arranging the door hinge repair.",
+        "hybrid_answer": "LiHua thanked Adam for arranging a maintenance service for the water tap at 10 AM on Thursday morning, expressing her flexibility with the time and saying she will be ready for the maintenance guy when he arrives.",
+        "hybrid_time": 5.306647062301636,
+        "fuzzy_score": 38,
+        "semantic_score": 0.6935437321662903,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "Where did LiHua and WolfgangSchulz plan to go for their photography adventure?",
+        "reference_answer": "They planned to explore the city, including the park by the river and old town square.",
+        "hybrid_answer": "Based on the conversation history, LiHua and WolfgangSchulz are planning to visit the caf Adam recommended when LiHua suggests meeting up around 3 PM. This information was provided in the Knowledge Base: \"LiHua is offering assistance with a light fixture repair, providing a possible time for the maintenance service and stating that LiHua can reach out if any further questions arise.\"",
+        "hybrid_time": 6.277652025222778,
+        "fuzzy_score": 18,
+        "semantic_score": 0.1139315664768219,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What was Adam doing on weekends?",
+        "reference_answer": "Adam mentioned that he was busy with work but enjoyed spending quality time with family on weekends.",
+        "hybrid_answer": "Based on our previous conversations, we can infer that Adam is a working professional who may have some time to himself on weekends. He mentioned being busy with work as usual and shared details about his personal life and interests like finding new places to relax in the city. However, without more specific information about his weekend activities, it's difficult to definitively say what Adam was doing on weekends. It could be anything from spending time with family or friends, exploring new spots in the city, attending community events, or pursuing hobbies.",
+        "hybrid_time": 4.711052656173706,
+        "fuzzy_score": 22,
+        "semantic_score": 0.8065528869628906,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What did LiHua discover in the city?",
+        "reference_answer": "LiHua found a cool café with great coffee and a local art gallery worth visiting.",
+        "hybrid_answer": "According to the Knowledge Base, LiHua discovered a few interesting spots while exploring her new city:\n\n1. A **cool little caf** that serves great coffee and has a lovely atmosphere. She mentioned it as being worth visiting.\n2. An art gallery near by which she found very inspiring and worth checking out.\n3. A park nearby where they could enjoy some time together for relaxation and exploration.\n\nThese are the details from the Knowledge Base regarding LiHua's discovery in the city.",
+        "hybrid_time": 4.3554770946502686,
+        "fuzzy_score": 23,
+        "semantic_score": 0.6478590965270996,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What did WolfgangSchulz say about the staff at FitZone?",
+        "reference_answer": "He mentioned that the staff at FitZone were really helpful.",
+        "hybrid_answer": "WolfgangSchulz mentioned that the staff at FitZone is \"really helpful if you need anything.\" He also added, \"They have a bunch of classes and all the equipment youd need. Plus, the vibe is pretty chill!\" It seems like WolfgangSchulz had a positive experience with the staff at FitZone based on these statements.",
+        "hybrid_time": 6.161302804946899,
+        "fuzzy_score": 29,
+        "semantic_score": 0.7279195189476013,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What kind of food was WolfgangSchulz in the mood for at lunch?",
+        "reference_answer": "He was in the mood for something warm and hearty, like soup or a sandwich.",
+        "hybrid_answer": "According to the Knowledge Base, at a later point in time, LiHua sent an inquiry about her friend AdamSmith: \"Hey Adam! Hope youre doing well. I wanted to ask if its possible to get a small repair done on the door hinge? Its been squeaking quite a bit. Thanks!\"",
+        "hybrid_time": 5.604779005050659,
+        "fuzzy_score": 20,
+        "semantic_score": 0.12619538605213165,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What was WolfgangSchulz’s reason for going to the gym?",
+        "reference_answer": "He said it was a great way to clear his head after coding all day.",
+        "hybrid_answer": "WolfgangSchulz mentioned that he goes to the gym because it's a great way to \"blow off some steam\" and help him stay active after coding all day. He enjoys trying new classes there, such as kickboxing, which helps keep him energized and motivated.",
+        "hybrid_time": 5.485795974731445,
+        "fuzzy_score": 35,
+        "semantic_score": 0.35342663526535034,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What is the tallest building in the city?",
+        "reference_answer": "The answer is not present in the text.",
+        "hybrid_answer": "According to the Knowledge Base, AdamSmith's source states that \"FitZone\" has a building height of 10 stories. Therefore, it would be the tallest building in the city based on this information.",
+        "hybrid_time": 2.8058810234069824,
+        "fuzzy_score": 18,
+        "semantic_score": 0.10243397206068039,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "Who won the last local marathon?",
+        "reference_answer": "The answer is not present in the text.",
+        "hybrid_answer": "Based on the latest available information from the Knowledge Base at the time of this response, the winner of the last local marathon is unknown as it was not mentioned in any related records or entries within the Knowledge Base. However, please consult a more recent source for the most up-to-date and accurate data regarding local marathon results.",
+        "hybrid_time": 5.604264974594116,
+        "fuzzy_score": 16,
+        "semantic_score": 0.17568029463291168,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What is the best-rated restaurant in the city?",
+        "reference_answer": "The answer is not present in the text.",
+        "hybrid_answer": "To provide a list of the top-rated restaurants in the city, I need to refer back to the knowledge base which has general data about various places in different categories such as food, ambiance, cost etc. \n\nThe general knowledge available is:\n\n1. The Rooftop at the Golden Nugget - Known for its high-quality steak and exceptional service.\n2. The Spice Table - Offers a diverse range of international cuisine with excellent reviews from customers.\n3. Carbone - A favorite among locals, known for its retro vibe and delicious Italian dishes.\n4. Bistro 1705 - A unique dining experience with a mix of different cuisines in one place.\n\nHowever, it is important to note that the ratings can change over time and may not be entirely accurate due to personal preferences or current conditions (like Covid-19). It would be best to check recent reviews or seek advice from people who have visited these places recently. \n\nAs a piece of general knowledge, I can tell you that The Rooftop at the Golden Nugget is often considered one of the top-rated restaurants in the city due to its high rating and excellent service.",
+        "hybrid_time": 10.918460845947266,
+        "fuzzy_score": 4,
+        "semantic_score": 0.024311140179634094,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "Which museum has the largest art collection here?",
+        "reference_answer": "The answer is not present in the text.",
+        "hybrid_answer": "Sorry for any confusion, but as I'm only able to provide responses based on the Knowledge Base data you've shared so far, which includes information about entities and relationships such as LiHua, AdamSmith, and Alice, and does not have access to real-time or current events like museum listings or exhibitions.",
+        "hybrid_time": 5.943279027938843,
+        "fuzzy_score": 15,
+        "semantic_score": 0.12055623531341553,
+        "llm_score": "data from LLM"
+    },
+    {
+        "model_name": "smollm2:1.7b",
+        "question": "What is the average rent for an apartment in the city?",
+        "reference_answer": "The answer is not present in the text.",
+        "hybrid_answer": "Based on my knowledge from the Knowledge Base, I can provide some general insights about rentals in different areas of the city:\n\n1. **Central Neighborhood**: Average rent ranges between $250 to $400 per month. This area offers a mix of residential and commercial spaces with easy access to public transportation.\n2. **Old Quarter**: Rent is slightly higher, ranging from $300 to $600 per month. This historic district provides unique charm and character but can be more crowded due to its popularity.\n3. **Riverfront**: Rent in this neighborhood averages around $450 to $750 per month. The scenic views of the river and access to public transportation make it an appealing option for those who value amenities.\n\nPlease note that these figures are approximate and may vary depending on specific locations within each district, additional features included (e.g., kitchenette, garden), and individual landlord discretion. Always consult with a local real estate agent or property manager for the most accurate information.",
+        "hybrid_time": 7.737468242645264,
+        "fuzzy_score": 6,
+        "semantic_score": -0.08162802457809448,
+        "llm_score": "data from LLM"
+    }
+]
