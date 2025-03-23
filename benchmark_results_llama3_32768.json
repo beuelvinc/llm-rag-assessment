@@ -7,7 +7,7 @@
         "hybrid_time": 9.50654125213623,
         "fuzzy_score": 18,
         "semantic_score": 0.7632650136947632,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -17,7 +17,7 @@
         "hybrid_time": 8.502350091934204,
         "fuzzy_score": 18,
         "semantic_score": 0.6139639616012573,
-        "llm_score": "data from LLM"
+        "llm_score": 0.8
     },
     {
         "model_name": "llama3.2",
@@ -27,7 +27,7 @@
         "hybrid_time": 7.611645936965942,
         "fuzzy_score": 38,
         "semantic_score": 0.5850995779037476,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -37,7 +37,7 @@
         "hybrid_time": 8.336633205413818,
         "fuzzy_score": 43,
         "semantic_score": 0.6937253475189209,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -47,7 +47,7 @@
         "hybrid_time": 7.733783960342407,
         "fuzzy_score": 44,
         "semantic_score": 0.7387544512748718,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -57,7 +57,7 @@
         "hybrid_time": 7.531057834625244,
         "fuzzy_score": 66,
         "semantic_score": 0.7161507606506348,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -67,7 +67,7 @@
         "hybrid_time": 7.743237733840942,
         "fuzzy_score": 37,
         "semantic_score": 0.6865521669387817,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -77,7 +77,7 @@
         "hybrid_time": 7.79210901260376,
         "fuzzy_score": 35,
         "semantic_score": 0.370098352432251,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "llama3.2",
@@ -87,7 +87,7 @@
         "hybrid_time": 8.464909076690674,
         "fuzzy_score": 39,
         "semantic_score": 0.7486718893051147,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -97,7 +97,7 @@
         "hybrid_time": 9.46274209022522,
         "fuzzy_score": 26,
         "semantic_score": 0.5761494636535645,
-        "llm_score": "data from LLM"
+        "llm_score": 0.8
     },
     {
         "model_name": "llama3.2",
@@ -107,7 +107,7 @@
         "hybrid_time": 8.03226900100708,
         "fuzzy_score": 55,
         "semantic_score": 0.6586850881576538,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -117,7 +117,7 @@
         "hybrid_time": 8.58358120918274,
         "fuzzy_score": 32,
         "semantic_score": 0.7322333455085754,
-        "llm_score": "data from LLM"
+        "llm_score": 0.4
     },
     {
         "model_name": "llama3.2",
@@ -127,7 +127,7 @@
         "hybrid_time": 8.674644947052002,
         "fuzzy_score": 13,
         "semantic_score": 0.6651504039764404,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -137,7 +137,7 @@
         "hybrid_time": 7.397264003753662,
         "fuzzy_score": 84,
         "semantic_score": 0.8014076948165894,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -147,7 +147,7 @@
         "hybrid_time": 9.094531059265137,
         "fuzzy_score": 34,
         "semantic_score": 0.5433753728866577,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -157,7 +157,7 @@
         "hybrid_time": 7.417101144790649,
         "fuzzy_score": 83,
         "semantic_score": 0.9220424890518188,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -167,7 +167,7 @@
         "hybrid_time": 7.939265012741089,
         "fuzzy_score": 52,
         "semantic_score": 0.8351852893829346,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -177,7 +177,7 @@
         "hybrid_time": 8.58568286895752,
         "fuzzy_score": 29,
         "semantic_score": 0.7797619104385376,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -187,7 +187,7 @@
         "hybrid_time": 8.215133905410767,
         "fuzzy_score": 33,
         "semantic_score": 0.8429325222969055,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "llama3.2",
@@ -197,7 +197,7 @@
         "hybrid_time": 8.900731801986694,
         "fuzzy_score": 32,
         "semantic_score": 0.553115963935852,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -207,17 +207,17 @@
         "hybrid_time": 9.523167371749878,
         "fuzzy_score": 19,
         "semantic_score": 0.7802008390426636,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
         "question": "What did LiHua discover in the city?",
         "reference_answer": "LiHua found a cool café with great coffee and a local art gallery worth visiting.",
-        "hybrid_answer": "**Discoveries in the City**\n\nLiHua discovered a few cool spots in the city during her exploration:\n\n*   **A beautiful park with stunning views**: She mentioned that Wolfgang Schulz recommended checking out the park by the river, and she found it to be a lovely spot for taking photos.\n*   **An old town square with amazing buildings**: The park led LiHua to an old town square, which featured some incredible buildings that caught her eye.\n*   **A great observation deck with a fantastic view of the city skyline**: Wolfgang Schulz also recommended the observation deck, where LiHua enjoyed taking in the breathtaking views of the city.\n\nThese discoveries were part of LiHua's exciting exploration of the city and were facilitated by her connections with her friends and acquaintances.",
+        "hybrid_answer": "**Discoveries in the City**\n\nLiHua discovered a few cool spots in the city during her exploration:\n\n*   **A beautiful park with stunning views**: She mentioned that WolfgangSchulz recommended checking out the park by the river, and she found it to be a lovely spot for taking photos.\n*   **An old town square with amazing buildings**: The park led LiHua to an old town square, which featured some incredible buildings that caught her eye.\n*   **A great observation deck with a fantastic view of the city skyline**: WolfgangSchulz also recommended the observation deck, where LiHua enjoyed taking in the breathtaking views of the city.\n\nThese discoveries were part of LiHua's exciting exploration of the city and were facilitated by her connections with her friends and acquaintances.",
         "hybrid_time": 10.707083940505981,
         "fuzzy_score": 11,
         "semantic_score": 0.44817525148391724,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "llama3.2",
@@ -227,7 +227,7 @@
         "hybrid_time": 9.00658106803894,
         "fuzzy_score": 25,
         "semantic_score": 0.5465077757835388,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -237,7 +237,7 @@
         "hybrid_time": 7.786772966384888,
         "fuzzy_score": 56,
         "semantic_score": 0.7515901327133179,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -247,7 +247,7 @@
         "hybrid_time": 8.445643901824951,
         "fuzzy_score": 34,
         "semantic_score": 0.48388633131980896,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -257,7 +257,7 @@
         "hybrid_time": 8.865260124206543,
         "fuzzy_score": 11,
         "semantic_score": 0.10083914548158646,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -267,7 +267,7 @@
         "hybrid_time": 8.497879028320312,
         "fuzzy_score": 15,
         "semantic_score": 0.11253465712070465,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -277,7 +277,7 @@
         "hybrid_time": 8.905220985412598,
         "fuzzy_score": 12,
         "semantic_score": 0.056427039206027985,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -287,7 +287,7 @@
         "hybrid_time": 9.771271228790283,
         "fuzzy_score": 9,
         "semantic_score": -0.04692963883280754,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -297,6 +297,6 @@
         "hybrid_time": 10.213457822799683,
         "fuzzy_score": 5,
         "semantic_score": 0.07816877961158752,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     }
 ]
