@@ -7,7 +7,7 @@
         "hybrid_time": 3.5364367961883545,
         "fuzzy_score": 24,
         "semantic_score": 0.8452527523040771,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -17,7 +17,7 @@
         "hybrid_time": 3.947432041168213,
         "fuzzy_score": 13,
         "semantic_score": 0.3717060685157776,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -27,7 +27,7 @@
         "hybrid_time": 3.151494264602661,
         "fuzzy_score": 28,
         "semantic_score": 0.6814867258071899,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -37,7 +37,7 @@
         "hybrid_time": 3.9663751125335693,
         "fuzzy_score": 30,
         "semantic_score": 0.5790113210678101,
-        "llm_score": "data from LLM"
+        "llm_score": 0.8
     },
     {
         "model_name": "smollm2:1.7b",
@@ -47,7 +47,7 @@
         "hybrid_time": 2.8959219455718994,
         "fuzzy_score": 45,
         "semantic_score": 0.6653756499290466,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -57,7 +57,7 @@
         "hybrid_time": 3.760859251022339,
         "fuzzy_score": 11,
         "semantic_score": 0.7035129070281982,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -67,7 +67,7 @@
         "hybrid_time": 3.0728659629821777,
         "fuzzy_score": 20,
         "semantic_score": 0.5285266637802124,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -77,7 +77,7 @@
         "hybrid_time": 3.330523729324341,
         "fuzzy_score": 23,
         "semantic_score": 0.38958147168159485,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -87,7 +87,7 @@
         "hybrid_time": 3.9951322078704834,
         "fuzzy_score": 12,
         "semantic_score": 0.22732609510421753,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -97,7 +97,7 @@
         "hybrid_time": 0.8853142261505127,
         "fuzzy_score": 20,
         "semantic_score": -0.016120225191116333,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -107,7 +107,7 @@
         "hybrid_time": 3.1310229301452637,
         "fuzzy_score": 15,
         "semantic_score": 0.5910087823867798,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -117,7 +117,7 @@
         "hybrid_time": 3.92364501953125,
         "fuzzy_score": 12,
         "semantic_score": 0.6080663800239563,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -127,7 +127,7 @@
         "hybrid_time": 6.7833099365234375,
         "fuzzy_score": 4,
         "semantic_score": 0.6894177198410034,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -137,7 +137,7 @@
         "hybrid_time": 5.6028358936309814,
         "fuzzy_score": 10,
         "semantic_score": 0.36062192916870117,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -147,7 +147,7 @@
         "hybrid_time": 3.333981990814209,
         "fuzzy_score": 26,
         "semantic_score": 0.06157620996236801,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -157,17 +157,17 @@
         "hybrid_time": 9.583225965499878,
         "fuzzy_score": 5,
         "semantic_score": 0.5727353096008301,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "smollm2:1.7b",
         "question": "When did LiHua suggest having lunch with WolfgangSchulz after arriving in the city?",
         "reference_answer": "LiHua suggested having lunch on the 8th.",
-        "hybrid_answer": "According to the conversation history, LiHua suggested having lunch with WolfgangSchulz on Wednesday:\n\n\n\"LiHua: Hey Adam! Hope you're doing well. I wanted to let you know that I accidentally broke a light fixture in the apartment. What should I do about it? Should I get it repaired myself or should we go see someone?\"\n\nAdamSmith: Hey Li Hua, just wanted to confirm that the plumber will be arriving tomorrow at 10 AM to fix the water tap. Let me know if that works for you!\nLiHua: Sounds good to me! I'll be ready for him. Thanks for the tip!\"\n\nSo LiHua suggested having lunch with WolfgangSchulz on Wednesday after she had already mentioned breaking a light fixture in her apartment.",
+        "hybrid_answer": "According to the conversation history, LiHua suggested having lunch with WolfgangSchulz on Wednesday after she had already mentioned breaking a light fixture in her apartment.",
         "hybrid_time": 5.178148031234741,
         "fuzzy_score": 11,
         "semantic_score": 0.4854373335838318,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -177,7 +177,7 @@
         "hybrid_time": 8.65634298324585,
         "fuzzy_score": 7,
         "semantic_score": 0.6824007034301758,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -187,7 +187,7 @@
         "hybrid_time": 2.6144919395446777,
         "fuzzy_score": 64,
         "semantic_score": 0.9358686804771423,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -197,7 +197,7 @@
         "hybrid_time": 3.368137836456299,
         "fuzzy_score": 29,
         "semantic_score": 0.2459351271390915,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -207,7 +207,7 @@
         "hybrid_time": 4.743524074554443,
         "fuzzy_score": 13,
         "semantic_score": 0.13700446486473083,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -217,7 +217,7 @@
         "hybrid_time": 3.180704116821289,
         "fuzzy_score": 43,
         "semantic_score": 0.7777696847915649,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -227,7 +227,7 @@
         "hybrid_time": 3.621591091156006,
         "fuzzy_score": 17,
         "semantic_score": 0.1529969573020935,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -237,7 +237,7 @@
         "hybrid_time": 6.328125953674316,
         "fuzzy_score": 9,
         "semantic_score": 0.33503079414367676,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -247,7 +247,7 @@
         "hybrid_time": 2.9965219497680664,
         "fuzzy_score": 10,
         "semantic_score": 0.2115580439567566,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -257,7 +257,7 @@
         "hybrid_time": 5.084461212158203,
         "fuzzy_score": 6,
         "semantic_score": 0.07109860330820084,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -267,7 +267,7 @@
         "hybrid_time": 3.41051983833313,
         "fuzzy_score": 18,
         "semantic_score": -0.06198951601982117,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -277,7 +277,7 @@
         "hybrid_time": 4.397068738937378,
         "fuzzy_score": 13,
         "semantic_score": 0.005008229985833168,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -287,7 +287,7 @@
         "hybrid_time": 4.245051860809326,
         "fuzzy_score": 11,
         "semantic_score": 0.049970563501119614,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "smollm2:1.7b",
@@ -297,6 +297,6 @@
         "hybrid_time": 3.5915379524230957,
         "fuzzy_score": 15,
         "semantic_score": -0.04582231491804123,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     }
 ]
