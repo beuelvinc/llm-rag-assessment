@@ -7,7 +7,7 @@
         "hybrid_time": 18.805855989456177,
         "fuzzy_score": 14,
         "semantic_score": 0.7923002243041992,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -17,7 +17,7 @@
         "hybrid_time": 13.131569862365723,
         "fuzzy_score": 47,
         "semantic_score": 0.570999264717102,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -27,7 +27,7 @@
         "hybrid_time": 11.806594848632812,
         "fuzzy_score": 44,
         "semantic_score": 0.6173998117446899,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -37,7 +37,7 @@
         "hybrid_time": 12.128022909164429,
         "fuzzy_score": 76,
         "semantic_score": 0.8196434378623962,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -47,7 +47,7 @@
         "hybrid_time": 13.073444843292236,
         "fuzzy_score": 56,
         "semantic_score": 0.7522243857383728,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -57,7 +57,7 @@
         "hybrid_time": 11.991423845291138,
         "fuzzy_score": 60,
         "semantic_score": 0.6799631118774414,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -67,7 +67,7 @@
         "hybrid_time": 13.764898777008057,
         "fuzzy_score": 32,
         "semantic_score": 0.7595329284667969,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -77,7 +77,7 @@
         "hybrid_time": 16.09406614303589,
         "fuzzy_score": 17,
         "semantic_score": 0.5338139533996582,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "llama3.2",
@@ -87,7 +87,7 @@
         "hybrid_time": 13.819706201553345,
         "fuzzy_score": 46,
         "semantic_score": 0.6307685971260071,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -97,7 +97,7 @@
         "hybrid_time": 13.016901969909668,
         "fuzzy_score": 59,
         "semantic_score": 0.7716358304023743,
-        "llm_score": "data from LLM"
+        "llm_score": 0.8
     },
     {
         "model_name": "llama3.2",
@@ -107,7 +107,7 @@
         "hybrid_time": 12.84216594696045,
         "fuzzy_score": 40,
         "semantic_score": 0.6777241230010986,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -117,17 +117,17 @@
         "hybrid_time": 12.366864204406738,
         "fuzzy_score": 60,
         "semantic_score": 0.700936496257782,
-        "llm_score": "data from LLM"
+        "llm_score": 0.8
     },
     {
         "model_name": "llama3.2",
         "question": "What meal was LiHua planning to order at lunch?",
         "reference_answer": "LiHua was planning to order a burger.",
-        "hybrid_answer": "LiHua mentioned that WolfgangSchulz had suggested they grab a nice warm and hearty meal, such as soup or a sandwich, for their lunch together. However, when it came to ordering, LiHua expressed her preference for getting a \"nice burger\", indicating that she was in the mood for something like a burger.",
+        "hybrid_answer": "LiHua mentioned that WolfgangSchulz had suggested they grab a nice warm and hearty meal, such as soup or a sandwich, for their lunch together. However, when it came to ordering, LiHua expressed her preference for getting a \"nice burger\" which sounds like her preferred meal choice.",
         "hybrid_time": 13.758563041687012,
         "fuzzy_score": 21,
         "semantic_score": 0.7537068128585815,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -137,7 +137,7 @@
         "hybrid_time": 13.201211929321289,
         "fuzzy_score": 38,
         "semantic_score": 0.6128314137458801,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -147,7 +147,7 @@
         "hybrid_time": 16.312562942504883,
         "fuzzy_score": 19,
         "semantic_score": 0.5544010400772095,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -157,7 +157,7 @@
         "hybrid_time": 12.134996891021729,
         "fuzzy_score": 38,
         "semantic_score": 0.8509834408760071,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -167,7 +167,7 @@
         "hybrid_time": 13.284975051879883,
         "fuzzy_score": 35,
         "semantic_score": 0.8332349061965942,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -177,7 +177,7 @@
         "hybrid_time": 15.840918064117432,
         "fuzzy_score": 24,
         "semantic_score": 0.710180938243866,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -187,7 +187,7 @@
         "hybrid_time": 12.779626846313477,
         "fuzzy_score": 30,
         "semantic_score": 0.8455061912536621,
-        "llm_score": "data from LLM"
+        "llm_score": 0.6
     },
     {
         "model_name": "llama3.2",
@@ -197,17 +197,17 @@
         "hybrid_time": 16.697373867034912,
         "fuzzy_score": 13,
         "semantic_score": 0.26701653003692627,
-        "llm_score": "data from LLM"
+        "llm_score": 0.0
     },
     {
         "model_name": "llama3.2",
         "question": "What was Adam doing on weekends?",
         "reference_answer": "Adam mentioned that he was busy with work but enjoyed spending quality time with family on weekends.",
-        "hybrid_answer": "**AdamSmith's Weekend Routine**\n\nOn weekends, AdamSmith was usually busy with work as usual. He mentioned this to LiHua during one of their conversations when they were discussing how he spent his Sundays.\n\nIn another conversation, when LiHua asked about his weekend plans, Adam replied that he had a family-oriented Sunday, spending time with his family and taking it easy.",
+        "hybrid_answer": "**AdamSmith's Weekend Routine**\n\nOn weekends, AdamSmith was usually busy with work as usual. He mentioned this to LiHua during one of their conversations when they were discussing how he spent his Sundays.\n\nIn another conversation, when LiHua asked about his weekend plans, Adam replied that he had a family-oriented Sunday, spending time with his family and taking it easy.\n\nThere is no specific information provided about what Adam was doing on weekends beyond his general statements about spending time with family and enjoying some relaxation.",
         "hybrid_time": 13.595522165298462,
         "fuzzy_score": 29,
         "semantic_score": 0.6808232069015503,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -217,7 +217,7 @@
         "hybrid_time": 16.093394994735718,
         "fuzzy_score": 21,
         "semantic_score": 0.6051338911056519,
-        "llm_score": "data from LLM"
+        "llm_score": 0.6
     },
     {
         "model_name": "llama3.2",
@@ -227,7 +227,7 @@
         "hybrid_time": 12.095958232879639,
         "fuzzy_score": 51,
         "semantic_score": 0.6314054727554321,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -237,7 +237,7 @@
         "hybrid_time": 12.217681169509888,
         "fuzzy_score": 54,
         "semantic_score": 0.7682503461837769,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -247,7 +247,7 @@
         "hybrid_time": 14.157343864440918,
         "fuzzy_score": 30,
         "semantic_score": 0.4261676073074341,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -257,7 +257,7 @@
         "hybrid_time": 14.972311019897461,
         "fuzzy_score": 9,
         "semantic_score": 0.005871938541531563,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -267,7 +267,7 @@
         "hybrid_time": 14.953526020050049,
         "fuzzy_score": 13,
         "semantic_score": 0.10225598514080048,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -277,7 +277,7 @@
         "hybrid_time": 15.01332402229309,
         "fuzzy_score": 11,
         "semantic_score": 0.04034464806318283,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -287,7 +287,7 @@
         "hybrid_time": 12.019834041595459,
         "fuzzy_score": 27,
         "semantic_score": 0.08876197040081024,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     },
     {
         "model_name": "llama3.2",
@@ -297,6 +297,6 @@
         "hybrid_time": 16.79790186882019,
         "fuzzy_score": 7,
         "semantic_score": -0.020287059247493744,
-        "llm_score": "data from LLM"
+        "llm_score": 1.0
     }
 ]
