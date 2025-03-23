@@ -163,7 +163,7 @@
         "model_name": "smollm2:1.7b",
         "question": "When did LiHua suggest having lunch with WolfgangSchulz after arriving in the city?",
         "reference_answer": "LiHua suggested having lunch on the 8th.",
-        "hybrid_answer": "According to the conversation history, LiHua suggested having lunch with WolfgangSchulz on Wednesday after she had already mentioned breaking a light fixture in her apartment.",
+        "hybrid_answer": "According to the conversation history, LiHua suggested having lunch with WolfgangSchulz on Wednesday:\n\n\n\"LiHua: Hey Adam! Hope you're doing well. I wanted to let you know that I accidentally broke a light fixture in the apartment. What should I do about it? Should I get it repaired myself or should we go see someone?\"\n\nAdamSmith: Hey Li Hua, just wanted to confirm that the plumber will be arriving tomorrow at 10 AM to fix the water tap. Let me know if that works for you!\nLiHua: Sounds good to me! I'll be ready for him. Thanks for the tip!\"\n\nSo LiHua suggested having lunch with WolfgangSchulz on Wednesday after she had already mentioned breaking a light fixture in her apartment",
         "hybrid_time": 5.178148031234741,
         "fuzzy_score": 11,
         "semantic_score": 0.4854373335838318,
