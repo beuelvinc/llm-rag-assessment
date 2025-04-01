@@ -6,6 +6,9 @@ context_sizes = [32768, 16384, 4096]
 for model in models:
     for ctx_size in context_sizes:
         print(f"\n🚀 Running {model} with context size {ctx_size}")
-        subprocess.run([
+        result = subprocess.run([
             "python", "run.py", model, str(ctx_size)
-        ])
+        ],               capture_output=True, text=True,check=True)
+
+        print("Output:\n", result.stdout)
+        print("Errors:\n", result.stderr)

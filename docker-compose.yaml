@@ -1,0 +1,12 @@
+services:
+  worker:
+    image: my-worker-image:latest
+    command: ["./run.sh",  "run_all"]
+    volumes:
+      - .:/app
+    extra_hosts:
+      - "host.docker.internal:host-gateway"
+#    deploy:
+#      resources:
+#        limits:
+#          memory: 10g

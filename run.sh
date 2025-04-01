@@ -1,4 +1,5 @@
-#!/bin/sh
+#!/bin/bash
+
 
 VENV_NAME=".venv"
 MODEL_1="gemma2:2b"        # 2b
@@ -103,14 +104,14 @@ ollama_pull_models() {
 
 run_all_tests() {
   echo "🚀 Starting to test all models..."
-  activate_venv
   python test_runner.py
   echo "✅ test completed for all models!"
+  while true; do sleep 30; done
+
 }
 
 run_all() {
   echo "🚀 Run to test all models..."
-  activate_venv
   python runner.py
   echo "✅ Run completed for all models!"
 }
