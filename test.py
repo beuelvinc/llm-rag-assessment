@@ -72,7 +72,7 @@ async def initialize_rag():
         llm_model_max_async=4,
         llm_model_max_token_size=context_size,
         llm_model_kwargs={
-            "host": "http://localhost:11434",
+            "host": "http://host.docker.internal:11434",
             "options": {"num_ctx": context_size},
         },
         embedding_func=EmbeddingFunc(
@@ -81,7 +81,7 @@ async def initialize_rag():
             func=lambda texts: ollama_embed(
                 texts,
                 embed_model="nomic-embed-text",
-                host="http://localhost:11434"
+                host="http://host.docker.internal:11434"
             ),
         ),
     )
@@ -123,9 +123,16 @@ async def benchmark():
             "llm_score": llm,
         })
 
-    output_file = f"./benchmark_results_{model_name.replace(':', '_')}_{context_size}.json"
-    with open(output_file, 'w', encoding='utf-8') as f:
-        json.dump(results, f, indent=4, ensure_ascii=False, cls=NumpyEncoder)
+    output_file = os.path.join("/app", f"benchmark_results_{model_name.replace(':', '_')}_{context_size}.json")
+    try:
+        print("🔍 Writing to", output_file)
+        os.makedirs(os.path.dirname(output_file), exist_ok=True)
+        with open(output_file, 'w', encoding='utf-8') as f:
+            json.dump(results, f, indent=4, ensure_ascii=False, cls=NumpyEncoder)
+        print("✅ File written:", output_file)
+    except Exception as e:
+        print("❌ Failed to write file:", output_file)
+        print("Error:", str(e))
 
     logging.info(f"✅ Results saved to {output_file}")
 
