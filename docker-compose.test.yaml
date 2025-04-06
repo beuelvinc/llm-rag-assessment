@@ -1,7 +1,8 @@
 services:
   worker:
-    image: my-worker-image:latest
     platform: linux/amd64
+    build:
+      context: .
     command: ["./run.sh",  "run_all_tests"]
     volumes:
       - .:/app
