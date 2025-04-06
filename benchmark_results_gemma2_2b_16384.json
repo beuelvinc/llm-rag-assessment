@@ -1,0 +1,13 @@
+[
+    {
+        "model_name": "gemma2:2b",
+        "context_size": 16384,
+        "question": "What is capital of france?",
+        "reference_answer": "dynamic",
+        "hybrid_answer": "The capital of France is Paris. \n\nHere's some additional information based on the knowledge base you provided:\n\n* **Entities:** The Knowledge base contains information about individuals and relationships. However, there's no mention of other countries or their capitals. \n* **Sources:**  Information related to France comes from a single source: \"Alice\".\n\n\n\n",
+        "hybrid_time": 2.516986608505249,
+        "fuzzy_score": 3,
+        "semantic_score": -0.07138148695230484,
+        "llm_score": "data from LLM"
+    }
+]
