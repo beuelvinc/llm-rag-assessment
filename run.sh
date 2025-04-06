@@ -106,8 +106,6 @@ run_all_tests() {
   echo "🚀 Starting to test all models..."
   python test_runner.py
   echo "✅ test completed for all models!"
-  while true; do sleep 30; done
-
 }
 
 run_all() {
