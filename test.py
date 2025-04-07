@@ -72,7 +72,7 @@ async def initialize_rag():
         llm_model_max_async=4,
         llm_model_max_token_size=context_size,
         llm_model_kwargs={
-            "host": "http://host.docker.internal:11434",
+            "host": "http://127.0.0.1:11434",
             "options": {"num_ctx": context_size},
         },
         embedding_func=EmbeddingFunc(
@@ -81,7 +81,7 @@ async def initialize_rag():
             func=lambda texts: ollama_embed(
                 texts,
                 embed_model="nomic-embed-text",
-                host="http://host.docker.internal:11434"
+                host="http://127.0.0.1:11434"
             ),
         ),
     )
