@@ -123,7 +123,7 @@ async def benchmark():
             "llm_score": llm,
         })
 
-    output_file = os.path.join("/app", f"benchmark_results_{model_name.replace(':', '_')}_{context_size}.json")
+    output_file = os.path.join("./", f"benchmark_results_{model_name.replace(':', '_')}_{context_size}.json")
     try:
         print("🔍 Writing to", output_file)
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
