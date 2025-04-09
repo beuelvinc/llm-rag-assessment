@@ -1,8 +1,8 @@
 import subprocess
 
 models = ["gemma2:2b", "smollm2:1.7b", "llama3.2"]
-#context_sizes = [32768, 16384, 4096]
-context_sizes = [32768]
+context_sizes = [32768, 16384, 4096]
+#context_sizes = [32768]
 
 for model in models:
     for ctx_size in context_sizes:
