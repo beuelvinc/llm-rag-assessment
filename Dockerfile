@@ -1,6 +1,7 @@
-FROM python:3.10-slim
+FROM python:3.12-slim
 
-# Install system deps
+
+# Install system dependencies
 RUN apt-get update && apt-get install -y \
     curl \
     unzip \
@@ -9,15 +10,14 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     && apt-get clean && rm -rf /var/lib/apt/lists/*
 
-# Install latest Rust via rustup
-RUN curl https://sh.rustup.rs -sSf | sh -s -- -y && \
-    echo 'export PATH="/root/.cargo/bin:$PATH"' >> /root/.bashrc
-
 WORKDIR /app
 
+# Copy project files
 COPY . .
-RUN chmod +x run.sh
-RUN . /root/.cargo/env && \
-    pip install --upgrade pip && \
-    if [ -f "req.txt" ]; then pip install -r req.txt; fi
 
+# Make script executable
+RUN chmod +x run.sh
+
+# Install Python deps (add wheel + setuptools + build for pyproject.toml builds)
+RUN pip install --upgrade pip setuptools wheel build && \
+    if [ -f "req.txt" ]; then pip install -r req.txt; fi
