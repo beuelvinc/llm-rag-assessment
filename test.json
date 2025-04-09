@@ -1,6 +1,14 @@
 {
-    "0": {
-        "question": "What is capital of france?",
-        "answer": "dynamic"
-    }
+  "0": {
+    "question": "What did LiHua inform WolfgangSchulz about in her first message?",
+    "answer": "LiHua informed WolfgangSchulz that she had arrived in the city."
+  },
+  "1": {
+    "question": "What day did LiHua suggest for meeting up for lunch?",
+    "answer": "LiHua suggested meeting up for lunch on the 8th of January."
+  },
+  "2": {
+    "question": "Who is looking for a place for them to hang out?",
+    "answer": "WolfgangSchulz is looking for a place for them to hang out."
+  }
 }
