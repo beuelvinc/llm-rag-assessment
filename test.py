@@ -20,6 +20,7 @@ from dotenv import load_dotenv
 load_dotenv()
 nest_asyncio.apply()
 logging.basicConfig(level=logging.INFO)
+sys.stdout.reconfigure(line_buffering=True)
 
 sentence_model = SentenceTransformer('paraphrase-MiniLM-L6-v2')
 DATA_DIR = "./subdata"
@@ -53,7 +54,8 @@ def cosine_similarity_score(predicted_answer, reference_answer):
 def get_llm_accuracy_score(q, r, m):
     return "data from LLM"
 
-async def insert_data_from_folder(rag, folder_path):
+async def insert_data_from_folder(rag, folder_path, batch_size=200):
+    contents = []
     for root, _, files in os.walk(folder_path):
         for filename in files:
             if filename == ".DS_Store":
@@ -62,14 +64,25 @@ async def insert_data_from_folder(rag, folder_path):
             with open(filepath, 'r', encoding='utf-8') as f:
                 content = f.read().strip()
                 if content:
-                    rag.insert(content)
+                    contents.append(content)
+
+    logging.info(f" Total documents to insert: {len(contents)}")
+
+    semaphore = asyncio.Semaphore(10)
+
+    async def process_batch(batch):
+        async with semaphore:
+            await rag.insert(batch)
+
+    batches = [contents[i:i + batch_size] for i in range(0, len(contents), batch_size)]
+    await asyncio.gather(*[process_batch(batch) for batch in batches])
 
 async def initialize_rag():
     rag = LightRAG(
         working_dir=WORKING_DIR,
         llm_model_func=ollama_model_complete,
         llm_model_name=model_name,
-        llm_model_max_async=4,
+        llm_model_max_async=30,
         llm_model_max_token_size=context_size,
         llm_model_kwargs={
             "host": "http://127.0.0.1:11434",
@@ -125,16 +138,16 @@ async def benchmark():
 
     output_file = os.path.join("./", f"benchmark_results_{model_name.replace(':', '_')}_{context_size}.json")
     try:
-        print("🔍 Writing to", output_file)
+        print(" Writing to", output_file)
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=4, ensure_ascii=False, cls=NumpyEncoder)
-        print("✅ File written:", output_file)
+        print(" File written:", output_file)
     except Exception as e:
-        print("❌ Failed to write file:", output_file)
+        print(" Failed to write file:", output_file)
         print("Error:", str(e))
 
-    logging.info(f"✅ Results saved to {output_file}")
+    logging.info(f" Results saved to {output_file}")
 
 def main():
     asyncio.run(benchmark())
