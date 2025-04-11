@@ -31,7 +31,7 @@ WORKING_DIR = "./working_dir"
 model_name = sys.argv[1]
 context_size = int(sys.argv[2])
 
---- Cleanup ---
+#--- Cleanup ---
 if os.path.exists(WORKING_DIR):
     shutil.rmtree(WORKING_DIR)
     logging.info(f"🧹 Deleted working dir: {WORKING_DIR}")
