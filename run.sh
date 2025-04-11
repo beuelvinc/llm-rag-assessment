@@ -103,15 +103,15 @@ ollama_pull_models() {
 
 
 run_all_tests() {
-  echo "🚀 Starting to test all models..."
+  echo " Starting to test all models..."
   python test_runner.py
-  echo "✅ test completed for all models!"
+  echo " test completed for all models!"
 }
 
 run_all() {
-  echo "🚀 Run to test all models..."
+  echo " Run to test all models..."
   python runner.py
-  echo "✅ Run completed for all models!"
+  echo " Run completed for all models!"
 }
 
 

@@ -1,11 +1,11 @@
 import subprocess
 
-models = ["gemma2:2b", "smollm2:1.7b", "llama3.2"]
+models = ["gemma2:2b", "llama3.2", "smollm2:1.7b"]
 context_sizes = [32768, 16384, 4096]
 
 for model in models:
     for ctx_size in context_sizes:
-        print(f"\n🚀 Running {model} with context size {ctx_size}")
+        print(f"\n Running {model} with context size {ctx_size}")
         result = subprocess.run([
             "python", "run.py", model, str(ctx_size)
         ],               capture_output=True, text=True,check=True)

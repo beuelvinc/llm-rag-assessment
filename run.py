@@ -33,7 +33,7 @@ context_size = int(sys.argv[2])
 # --- Cleanup ---
 if os.path.exists(WORKING_DIR):
     shutil.rmtree(WORKING_DIR)
-    logging.info(f"🧹 Deleted working dir: {WORKING_DIR}")
+    logging.info(f" Deleted working dir: {WORKING_DIR}")
 
 # --- Helpers ---
 class NumpyEncoder(json.JSONEncoder):
@@ -53,7 +53,8 @@ def cosine_similarity_score(predicted_answer, reference_answer):
 def get_llm_accuracy_score(q, r, m):
     return "data from LLM"
 
-async def insert_data_from_folder(rag, folder_path):
+async def insert_data_from_folder(rag, folder_path, batch_size=100):
+    contents = []
     for root, _, files in os.walk(folder_path):
         for filename in files:
             if filename == ".DS_Store":
@@ -62,7 +63,15 @@ async def insert_data_from_folder(rag, folder_path):
             with open(filepath, 'r', encoding='utf-8') as f:
                 content = f.read().strip()
                 if content:
-                    rag.insert(content)
+                    contents.append(content)
+
+    logging.info(f" Total documents to insert: {len(contents)}")
+
+    for i in range(0, len(contents), batch_size):
+        batch = contents[i:i + batch_size]
+        rag.insert(batch)
+        logging.info(f" Inserted batch {i // batch_size + 1}/{(len(contents) - 1) // batch_size + 1}")
+
 
 async def initialize_rag():
     rag = LightRAG(
@@ -125,16 +134,16 @@ async def benchmark():
 
     output_file = os.path.join("/app", f"benchmark_results_{model_name.replace(':', '_')}_{context_size}.json")
     try:
-        print("🔍 Writing to", output_file)
+        print(" Writing to", output_file)
         os.makedirs(os.path.dirname(output_file), exist_ok=True)
         with open(output_file, 'w', encoding='utf-8') as f:
             json.dump(results, f, indent=4, ensure_ascii=False, cls=NumpyEncoder)
-        print("✅ File written:", output_file)
+        print(" File written:", output_file)
     except Exception as e:
-        print("❌ Failed to write file:", output_file)
+        print(" Failed to write file:", output_file)
         print("Error:", str(e))
 
-    logging.info(f"✅ Results saved to {output_file}")
+    logging.info(f" Results saved to {output_file}")
 
 def main():
     asyncio.run(benchmark())
