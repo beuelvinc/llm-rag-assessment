@@ -54,7 +54,7 @@ def cosine_similarity_score(predicted_answer, reference_answer):
 def get_llm_accuracy_score(q, r, m):
     return "data from LLM"
 
-async def insert_data_from_folder(rag, folder_path, batch_size=200):
+async def insert_data_from_folder(rag, folder_path, batch_size=100):
     contents = []
     for root, _, files in os.walk(folder_path):
         for filename in files:
@@ -68,14 +68,10 @@ async def insert_data_from_folder(rag, folder_path, batch_size=200):
 
     logging.info(f" Total documents to insert: {len(contents)}")
 
-    semaphore = asyncio.Semaphore(10)
-
-    async def process_batch(batch):
-        async with semaphore:
-            await rag.insert(batch)
-
-    batches = [contents[i:i + batch_size] for i in range(0, len(contents), batch_size)]
-    await asyncio.gather(*[process_batch(batch) for batch in batches])
+    for i in range(0, len(contents), batch_size):
+        batch = contents[i:i + batch_size]
+        rag.insert(batch)
+        logging.info(f" Inserted batch {i // batch_size + 1}/{(len(contents) - 1) // batch_size + 1}")
 
 async def initialize_rag():
     rag = LightRAG(
