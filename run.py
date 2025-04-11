@@ -78,7 +78,7 @@ async def initialize_rag():
         working_dir=WORKING_DIR,
         llm_model_func=ollama_model_complete,
         llm_model_name=model_name,
-        llm_model_max_async=4,
+        llm_model_max_async=30,
         llm_model_max_token_size=context_size,
         llm_model_kwargs={
             "host": f"http://host.docker.internal:{llm_port}",
